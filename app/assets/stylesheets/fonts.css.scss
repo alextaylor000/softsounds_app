@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'montserratultra_light';
+    src: asset-url('montserrat-ultralight-webfont.eot');
+    src: asset-url('montserrat-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('montserrat-ultralight-webfont.woff2') format('woff2'),
+         asset-url('montserrat-ultralight-webfont.woff') format('woff'),
+         asset-url('montserrat-ultralight-webfont.ttf') format('truetype'),
+         asset-url('montserrat-ultralight-webfont.svg#montserratultra_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrathairline';
+    src: asset-url('montserrat-hairline-webfont.eot');
+    src: asset-url('montserrat-hairline-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('montserrat-hairline-webfont.woff2') format('woff2'),
+         asset-url('montserrat-hairline-webfont.woff') format('woff'),
+         asset-url('montserrat-hairline-webfont.ttf') format('truetype'),
+         asset-url('montserrat-hairline-webfont.svg#montserrathairline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
