@@ -15,7 +15,7 @@
       <ul id="nav">
 
         <li class="slidedown">
-          <a href="#">Channel Select</a>
+          <a href="#">Select Channel</a>
         </li>
 
         <li class="slidedown">
@@ -105,8 +105,9 @@
     <!-- HERO TEXT -->
     <div class="hero-caption">
       <div class="hero-text">
-
-        <h1 class="mh-line-size-1 m-b-50">softsounds</h1>
+        <!-- <h1 class="mh-line-size-1 m-b-50">softsounds</h1> -->
+        <div id="stream-data"><h2 style="font-size: 30px; color:#fff"><%= @stream.metadata.artist %></h2>
+        <h2 style="font-size: 20px; color:#eee"><%= @stream.metadata.song %></h2></div>
 
       </div>
     </div>
@@ -114,6 +115,20 @@
 
   </section>
   <!-- /HERO -->
+
+  <section class="footer">
+
+      <section id="footer-player">
+
+          <ul>
+
+            <li><a href="javascript:;" id="footer-player-play"></a></li>
+
+          </ul>
+
+        </section>
+
+  </section>
 
 </div>
 <!-- /WRAPPER -->

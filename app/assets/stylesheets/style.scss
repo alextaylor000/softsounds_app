@@ -28,9 +28,234 @@ iframe {
 	border: 0;
 }
 
+
+/* ------------------------------------------------------------------
+Player
+------------------------------------------------------------------ */
+
+
+#footer-player {
+
+    display: block;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    // background-color: rgba(0,0,0,0.0);
+
+    z-index: 1;
+
+    position: relative;
+
+		vertical-align: middle;
+
+		text-align: center;
+
+	}
+
+
+	footer #footer-player audio {
+
+	    display: none;
+
+	}
+
+	#player{
+
+		left: 35px;
+
+		position: relative;
+
+	}
+
+	#player li {
+
+		display: inline;
+
+		float: left;
+
+		position: relative;
+
+		margin-right: 10px;
+
+		top: 24.5px;
+
+	}
+
+
+
+	footer #footer-player a {
+
+	    position: relative;
+
+		float: left;
+
+	    display: inline-block;
+
+	    width: 26px;
+
+	    height: 26px;
+
+	    background-repeat: no-repeat;
+
+	    background: url('play_icon.svg');
+
+	    // background-size: 84px 20px;
+
+
+
+	}
+
+	footer #footer-player a.ply-track{
+
+		background: none;
+
+		width: auto;
+
+	}
+
+	footer #footer-player a#footer-player-play {
+
+	    background-position: 0 0;
+
+	   /* left: 35px;*/
+
+	}
+
+
+
+	footer #footer-player a#footer-player-pause {
+
+	    background-position: -42px 0;
+
+	   /*left: -31px;
+
+	   position: absolute;
+	*/
+	}
+
+
+
+	footer #footer-player a#footer-player-stop {
+
+	    background-position: -21px 0;
+
+	    /*left: 48px;*/
+
+	}
+
+
+
+	footer #footer-player a#footer-player-rewind {
+
+	    background-position: -42px 0;
+
+	    /*right: 63px;*/
+
+	}
+
+	.switch_stream {
+
+	    /*background-image: url('../switch/switch.png') !important;
+
+	    right: -100px;
+
+	    top: 21px !important;*/
+
+	    width: 26px !important;
+
+	    height:26px !important;
+
+	    background-size:26px 26px !important;
+
+	}
+
+
+	footer #footer-player a:hover {
+
+	    opacity: .75;
+
+	}
+
+
+
+	footer #footer-player a:active {
+
+	    opacity: .55;
+
+	}
+
+
+
+	footer #footer-player div {
+
+	    background-color: rgba(255,255,255,0.06);
+
+	    padding: 0 20px;
+
+	    font-size: 10px;
+
+	    color: #fff;
+
+	    text-transform: uppercase;
+
+	    overflow: hidden;
+
+	    white-space: nowrap;
+
+	    width: 280px;
+
+	    height: 21px;
+
+	    position: relative;
+
+		float: left;
+
+		margin-left: 5px;
+
+
+	    -webkit-border-radius: 9px;
+
+	    -moz-border-radius: 9px;
+
+	    -ms-border-radius: 9px;
+
+	    -o-border-radius: 9px;
+
+	    border-radius: 9px;
+
+	    -webkit-box-shadow: 0 0px 0 rgba(0,0,0,0.3);
+
+	    -moz-box-shadow: 0 0px 0 rgba(0,0,0,0.3);
+
+	    -ms-box-shadow: 0 0px 0 rgba(0,0,0,0.3);
+
+	    -o-box-shadow: 0 0px 0 rgba(0,0,0,0.3);
+
+	    box-shadow: 0 0px 0 rgba(0,0,0,0.3);
+			top: 26px;
+			margin-right: 15px;
+
+	}
+
+
+
+	footer #footer-player div span {
+
+	    display: block;
+
+	    line-height: 21px;
+
+	    text-align: center;
+
+	}
+
+
 /* ------------------------------------------------------------------
 Selection
 ------------------------------------------------------------------ */
+
 
 ::-moz-selection {
 	background: #000;
@@ -1076,6 +1301,16 @@ Navigation
 	        transition: all 0.3s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 }
 
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	background: #222;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+
 .navbar-custom {
 	background: rgba(10, 10, 10, 0.9);
 	border: 0;
@@ -1088,13 +1323,13 @@ Navigation
 
 .navbar-custom .navbar-brand {
 	padding: 10px 15px;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
 	font-weight: 400;
 	font-size: 20px;
 	color: #fff;
 	font-family: 'montserrathairline';
 	text-transform: lowercase!important;
-	margin-top: 4px;
+	margin-top: 7trpx;
 }
 
 .navbar-custom a {
@@ -1139,8 +1374,8 @@ Navigation
 
 .navbar-transparent {
 	background: transparent;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .navbar-transparent a,
@@ -1360,8 +1595,8 @@ Hero
 }
 
 .mh-line-size-1 {
-	letter-spacing: 24px;
-	font-size: 50px;
+	letter-spacing: 20px;
+	font-size: 60px;
 	opacity: 0.9;
 	color: #fff;
 }

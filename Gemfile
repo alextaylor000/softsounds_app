@@ -16,6 +16,7 @@ gem 'font-awesome-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem "quiet_assets"
 gem 'jquery-ui-rails'
+gem "shoutout"
 
 group :development, :test do
   gem 'byebug'
