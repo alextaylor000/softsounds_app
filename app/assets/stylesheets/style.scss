@@ -9,9 +9,9 @@ Version: 1.0.2
 
 #leaf {
   background: url('leaf.png');
-  background-size: 20px 20px;
-  height: 20px;
-  width: 20px;
+  background-size: 22px 22px;
+  height: 22px;
+  width: 22px;
   display: inline-block;
   background-repeat: none;
   z-index: 2;
@@ -33,9 +33,9 @@ Version: 1.0.2
 
 #info {
   background: url('info.png') no-repeat;
-  background-size: 28px 28px;
-  width: 28px;
-  height: 28px;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
   backface-visibility: hidden;
   display: inline-block;
   margin-right: 25px;
@@ -43,17 +43,22 @@ Version: 1.0.2
 
 #heart-empty {
   background: url('heart_empty.png') no-repeat;
-  background-size: 28px 28px;
-  width: 28px;
-  height: 28px;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
   backface-visibility: hidden;
   display: inline-block;
   margin-left: 25px;
 }
 
 #menubox {
+  background: url('mobile_menu.svg');
+  background-size: 24px 24px;
   font-size: 28px;
-  margin-top: -7px;
+  margin-top: -2px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
 
 }
 
@@ -106,7 +111,7 @@ Player
   position: absolute;
   backface-visibility: hidden;
   cursor: pointer;
-  margin-left: 59px;
+  margin-left: 53px;
 }
 
 #play-back {
@@ -123,7 +128,7 @@ Player
   position: absolute;
   backface-visibility: hidden;
   cursor: pointer;
-  margin-left: -95px;
+  margin-left: -90px;
 }
 
 #speaker {
@@ -1255,7 +1260,7 @@ Navigation
 	padding: 10px 15px;
 	letter-spacing: 2px;
 	font-weight: 400;
-	font-size: 22px;
+	font-size: 24px;
 	color: #fff;
 	font-family: 'montserratultra_light';
 	text-transform: lowercase!important;
