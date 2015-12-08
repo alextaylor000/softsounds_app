@@ -17,33 +17,16 @@
 //= require bootstrap
 //= require_tree .
 
-// function anotherSong() {
-//   $.ajax({
-//     //url: '/',
-//     success: function(data) {
-//       $('h2').load('/ h2')
-//     }
-//   });
-//   setInterval(anotherSong, 3000);
-// }
 
-//
 $(document).ready(function(){
-//
-  var updateSong = function(){
-    $.ajax({
-      type : 'GET',
-      url : '/',
-      dataType : 'html',
-      success : function(data){
-        html = $('h2').html();
-        $('h2').html(html);
-      }
-    });
 
-  }
+function updateSong() {
+  $.ajax({
+    type : 'GET',
+    url: '/refresh'
+  });
+};
 
-  // setInterval(anotherSong, 3000);
-  // setInterval(updateSong, 5000);
+setInterval(updateSong, 3000);
 
 });

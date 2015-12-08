@@ -17,11 +17,9 @@
         <li class="slidedown">
           <a href="#">Select Channel</a>
         </li>
-
         <li class="slidedown">
           <a href="#">Favorites</a>
         </li>
-
         <li class="slidedown">
           <a href="#">FAQ</a>
         </li>
@@ -34,22 +32,18 @@
   </div>
 
   <div class="overlay-navigation-footer">
-
     <div class="container">
-
       <div class="row">
 
         <div class="col-sm-12 text-center">
           <p class="copyright font-alt m-b-0">© Softsounds</p>
+
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </div>
+
 <!-- /OVERLAY MENU -->
 
 <!-- WRAPPER -->
@@ -59,13 +53,10 @@
   <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
 
     <div class="container">
-
       <div class="navbar-header">
-        <!-- YOU LOGO HERE -->
-        <!-- <a class="navbar-brand" href="index.html"> -->
+        <a href="/">
           <span class="navbar-brand">softsounds</span>
-          <!-- <img src="assets/images/logo-light.png" width="95" alt=""> -->
-        <!-- </a> -->
+        </a>
       </div>
 
       <!-- ICONS NAVBAR -->
@@ -90,9 +81,7 @@
             Sign Up
           </a>
         </li>
-
       </ul>
-
     </div>
 
   </nav>
@@ -104,13 +93,13 @@
     <!-- HERO TEXT -->
     <div class="hero-caption">
       <div class="hero-text">
-        <!-- <h1 class="mh-line-size-1 m-b-50">softsounds</h1> -->
-        <div id="stream-data"><h2 style="font-size: 30px; color:#fff"><%= @stream.metadata.artist %></h2>
-        <h2 style="font-size: 20px; color:#eee"><%= @stream.metadata.song %></h2></div>
+
+        <div id="stream-data">
+        <%= render "stream_data" %>
+        </div>
         <div id="song-info"><span id="info"></span><span id="heart-empty"></span></div>
 
       </div>
-
     </div>
     <!-- /HERO TEXT -->
 
@@ -118,7 +107,6 @@
   <!-- /HERO -->
 
   <section class="footer">
-
 
       <section id="footer-player">
 
@@ -131,8 +119,6 @@
         <div id="jplayer" class="jp-jplayer"></div>
 
       </section>
-
-
 
   </section>
 
