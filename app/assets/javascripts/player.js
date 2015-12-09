@@ -11,7 +11,7 @@ $(document).ready(function(){
        solution: 'html, flash',
        supplied: "mp3",
        preload: 'none',
-       volume: 0.9,
+       volume: 0.8,
        muted: false,
        cssSelectorAncestor: "",
        cssSelector: {

@@ -19,12 +19,9 @@
 *			debug, // @optional, making the plugin verbose in the console
 *			);
 * instance
-* $(id).jPlayerFade(debug // @optional
-*					  ).to(duration, // time in ms
-*						from, // starting volume ratio
-*						to, // ending volume ratio
-*						callback, // @optional, function
-*					   );
+* $(id).jPlayerFade(debug // @optional).to(duration, // time in ms from, // starting volume ratio to, // ending volume ratio
+*						callback, // @optional, function);
+
 * N.B. the debug parameter is set in the jPlayerFade function
 *
 * fadeIn and fadeOut provide a better interface for dealing with fadeIn/Out

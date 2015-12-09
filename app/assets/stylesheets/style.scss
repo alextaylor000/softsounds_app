@@ -23,7 +23,7 @@ button {
 }
 
 #select-channel {
-  transition: opacity .5s ease-in-out;
+  transition: opacity .3s ease-in-out;
   margin-top: -75px;
   backface-visibility: hidden;
 }
@@ -32,18 +32,21 @@ button {
   color: white!important;
 }
 
-#select-stream {
-  transition: opacity 1s ease-in-out;
+#stream-data {
+  display: none;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
   margin-top: -75px;
   backface-visibility: hidden;
 }
 
-#stream-data {
-  display: none;
-  opacity: 0;
-  transition: opacity .5s ease-in-out;
-  margin-top: -75px;
-  backface-visibility: hidden;
+#stream-1 {
+  transition: .3s ease-in-out;
+}
+
+#stream-2 {
+  opacity: .3;
+  transition: .3s ease-in-out;
 }
 
 #song-info {
@@ -76,7 +79,7 @@ button {
 #log-in {
   display: none;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  transition: opacity .3s ease-in-out;
   margin-top: -75px;
   backface-visibility: hidden;
 }
@@ -84,7 +87,7 @@ button {
 #sign-up {
   display: none;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  transition: opacity .3s ease-in-out;
   margin-top: -75px;
   backface-visibility: hidden;
 }
@@ -92,7 +95,7 @@ button {
 #favorites {
   display: none;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  transition: opacity .3s ease-in-out;
   margin-top: -75px;
   backface-visibility: hidden;
 }
@@ -171,6 +174,10 @@ Player
   opacity: .5;
 }
 
+#pause:hover {
+  opacity: .5;
+}
+
 #play-forward {
   background: url("player_forward.png") no-repeat;
   background-size: 26px 26px;
@@ -220,6 +227,7 @@ Player
   cursor: pointer;
   margin-left: 55px;
   float: left;
+  transition: .5s ease-in-out;
 }
 
 #speaker-off {
@@ -238,6 +246,14 @@ Player
   margin-left: 55px;
   float: left;
   display:none;
+}
+
+#speaker:hover {
+  opacity: .5;
+}
+
+#speaker-off:hover {
+  opacity: .5;
 }
 
 #share {
@@ -405,6 +421,7 @@ h2, .h2 {
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased !important;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  transition: .5s ease-in-out;
 }
 
 h3, .h3 {

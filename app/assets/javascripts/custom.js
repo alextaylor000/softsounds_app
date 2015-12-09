@@ -194,9 +194,19 @@
 		  return false;
 		});
 
-		$("#select-stream-1").click( function() {
-  		$("#jplayer").jPlayer("play");
+		$("#select-stream-1").click(function() {
+  		$("#jplayer").jPlayer("play").jPlayerFade().in(6000);
 		});
+
+		$("#stream-2").on("mouseenter", function() {
+			$(this).css("opacity", "1");
+			$("#stream-1").css("opacity", ".3");
+		})
+
+		$("#stream-1").on("mouseenter", function() {
+			$(this).css("opacity", "1");
+			$("#stream-2").css("opacity", ".3");
+		})
 
 		$(window).keydown(function(e) {
 			if (overlayMenu.hasClass('active')) {
