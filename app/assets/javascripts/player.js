@@ -19,8 +19,8 @@ $(document).ready(function(){
          play: "#play",
          pause: "#pause",
          stop: "#stop",
-         mute: "#mute",
-         unmute: "#unmute",
+         mute: "#speaker",
+         unmute: "#speaker-off",
          currentTime: "#currentTime",
          duration: "#duration"
        },

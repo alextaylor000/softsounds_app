@@ -142,16 +142,16 @@
 		});
 
 		$('#select-stream-1').on('click', function() {
-			$('.page').hide().css("opacity", "0");;
+			$('.page').hide().css("opacity", "0");
 			$("#stream-data").css('display', "block").fadeTo(200, "1");
+			$(".footer").fadeTo(1000, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
 		});
 
 		$('#select-stream-2').on('click', function() {
-		  hideMenu();
-			$('.page').fadeOut(200).hide().css("opacity", "0");;
-			$("#stream-data").css('display', "block").css("opacity", "1");
+			$('.page').hide().css("opacity", "0");
+			$("#stream-data").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
 		});
@@ -159,7 +159,7 @@
 		$('#favorite-page').on('click', function() {
 		  hideMenu();
 			$('.page').fadeOut(200).hide().css("opacity", "0");;
-			$("#favorites").css('display', "block").css("opacity", "1");
+			$("#favorites").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
 		});
@@ -167,7 +167,7 @@
 		$('#faq-page').on('click', function() {
 		  hideMenu();
 			$('.page').fadeOut(200).hide().css("opacity", "0");;
-			$("#faq").css('display', "block").css("opacity", "1");
+			$("#faq").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
 		});
@@ -175,9 +175,27 @@
 		$('#contact-page').on('click', function() {
 		  hideMenu();
 			$('.page').fadeOut(200).hide();
-			$("#contact").css('display', "block").css("opacity", "1");
+			$("#contact").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
+		});
+
+		$('#log-in-page').on('click', function() {
+			$('.page').fadeOut(200).hide();
+			$("#log-in").css('display', "block").fadeTo(200, "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
+		});
+
+		$('#sign-up-page').on('click', function() {
+			$('.page').fadeOut(200).hide();
+			$("#sign-up").css('display', "block").fadeTo(200, "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
+		});
+
+		$("#select-stream-1").click( function() {
+  		$("#jplayer").jPlayer("play");
 		});
 
 		$(window).keydown(function(e) {

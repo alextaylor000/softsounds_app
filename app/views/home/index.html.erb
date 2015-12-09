@@ -1,46 +1,86 @@
 <div class="hero-caption">
     <div class="hero-text">
 
+
 <!-- SELECT CHANNEL   -->
       <div id="select-channel" class="page">
-      <a href="#" id="select-stream-1"><h2>Channel 1 - Deep Frequencies</h2>
-      <h4>Grooves, dub forms, techno</h4></a>
-      <a href="#" id="select-stream-2"><h2>Channel 2 - Light Frequencies</h2>
-      <h4>Ambient, Textures, Misc rhythms</h4></a>
+        <a href="#" id="select-stream-1" class="play"><h2>Channel 1 - Deep Frequencies</h2>
+        <h4>Grooves, dub forms, techno</h4></a>
+        <br/>
+        <a href="#" id="select-stream-2"><h2>Channel 2 - Light Frequencies</h2>
+        <h4>Ambient, Textures, Misc rhythms</h4></a>
       </div>
-
 <!-- /SELECT CHANNEL -->
+
 
 <!-- STREAM DATA   -->
       <div id="stream-data" class="page">
         <h4>currently playing:</h4>
-      <%= render "stream_data" %>
+        <%= render "stream_data" %>
       </div>
-
 <!-- /STREAM DATA -->
 
-<!-- LOG IN -->
 
+<!-- LOG IN -->
 <div id="log-in" class="page">
     <h2>Log in</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email, required: false, autofocus: true %>
+      <%= f.input :password, required: false %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Log in" %>
+    </div>
+    <% end %>
 
-<%= render "devise/shared/links" %>
-
+    <%= render "devise/shared/links" %>
 </div>
-
 <!-- LOG IN -->
+
+
+<!-- SIGN UP -->
+<div id="sign-up" class="page">
+    <h2>Sign up</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    </div>
+
+    <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+    </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+</div>
+<!-- /SIGN UP -->
+
+
+<!-- FAVORITES -->
+<div id="favorites" class="page">
+  <h2>Favorites</h2>
+</div>
+<!-- /FAVORITES -->
+
+<!-- FAQ -->
+<div id="faq" class="page">
+  <h2>FAQ</h2>
+</div>
+<!-- /FAQ -->
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+  <h2>Contact</h2>
+</div>
+<!-- /CONTACT -->
 
   </div>
 </div>

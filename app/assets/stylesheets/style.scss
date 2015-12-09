@@ -14,7 +14,12 @@ Main page
 ------------------------------------------------------------------ */
 
 .ion-close-round {
-  margin-right: 25px;
+  margin-top: -5px;
+}
+
+button {
+  border: 0;
+  outline: none;
 }
 
 #select-channel {
@@ -71,9 +76,41 @@ Main page
 #log-in {
   display: none;
   opacity: 0;
+  transition: opacity .5s ease-in-out;
+  margin-top: -75px;
+  backface-visibility: hidden;
+}
+
+#sign-up {
+  display: none;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  margin-top: -75px;
+  backface-visibility: hidden;
+}
+
+#favorites {
+  display: none;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  margin-top: -75px;
+  backface-visibility: hidden;
+}
+
+#faq {
+  display: none;
+  opacity: 0;
   transition: .3s ease-in-out;
   margin-top: -75px;
 }
+
+#contact {
+  display: none;
+  opacity: 0;
+  transition: .3s ease-in-out;
+  margin-top: -75px;
+}
+
 
 /* ------------------------------------------------------------------
 Player
@@ -104,6 +141,30 @@ Player
   backface-visibility: hidden;
   cursor: pointer;
   transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+// .jp-state-playing div.jp-type-playlist .jp-play {
+//   background: url("../image/jplayer.pink.flag.jpg") -24px -120px no-repeat; }
+//
+// .jp-state-playing div.jp-type-playlist .jp-play:focus {
+//   background: url("../image/jplayer.pink.flag.jpg") -124px -120px no-repeat; }
+
+#pause {
+  background: url('pause_icon.png') no-repeat;
+  background-size: 34px 34px;
+  display: inline-block;
+  color: white;
+  width: 38px;
+  height: 38px;
+  z-index: 2;
+  margin-top: 7px;
+  opacity: .95;
+  backface-visibility: hidden;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  display: none;
 }
 
 #play:hover {
@@ -159,6 +220,24 @@ Player
   cursor: pointer;
   margin-left: 55px;
   float: left;
+}
+
+#speaker-off {
+  background: url('speaker_off.png') no-repeat;
+  background-size: 26px 26px;
+  display: inline-block;
+  color: white;
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  z-index: 2;
+  margin-top: 11px;
+  opacity: .95;
+  backface-visibility: hidden;
+  cursor: pointer;
+  margin-left: 55px;
+  float: left;
+  display:none;
 }
 
 #share {
@@ -1296,13 +1375,15 @@ Navigation
 }
 
 .footer {
-	position: absolute;
+  position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: 70px;
 	background: rgba(34,34,34,.2);
 	padding-top: 10px;
 	padding-bottom: 10px;
+  opacity: 0;
+  backface-visibility: hidden;
 	}
 
 .navbar-custom {
@@ -1329,7 +1410,7 @@ Navigation
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   backface-visibility: hidden;
   cursor: pointer;
-  transition: .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .navbar-custom .navbar-brand:hover {

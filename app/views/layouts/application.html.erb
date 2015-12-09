@@ -83,11 +83,10 @@
 
         <ul class="extra-navbar nav navbar-nav navbar-right">
           <li>
-              <%= link_to "Log In", sign_in_path %>
+              <a href="#" id="log-in-page">Sign In</a>
           </li>
           <li>
-            <a href="#" title="Menu">
-              Sign Up
+            <a href="#" id="sign-up-page">Sign Up</a>
             </a>
           </li>
         </ul>
@@ -108,11 +107,11 @@
 
         <section id="footer-player">
 
-          <div id="speaker"><a href="javascript:;"></a></div>
-          <div id="play-back"><a href="javascript:;"></a></div>
-          <div id="play"><a href="javascript:;"></a></div>
-          <div id="play-forward"><a href="javascript:;"></a></div>
-          <div id="share"><a href="javascript:;"></a></div>
+          <button id="speaker"><a href="javascript:;"></a></button><button id="speaker-off"><a href="javascript:;"></a></button>
+          <button id="play-back"><a href="javascript:;"></a></button>
+          <button id="play"></button><button id="pause"></button>
+          <button id="play-forward"><a href="javascript:;"></a></button>
+          <button id="share"><a href="javascript:;"></a></button>
 
           <div id="jplayer" class="jp-jplayer"></div>
 
