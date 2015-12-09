@@ -13,20 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require turbolinks
 //= require bootstrap
 //= require_tree .
 
-
 $(document).ready(function(){
 
-function updateSong() {
-  $.ajax({
-    type : 'GET',
-    url: '/refresh'
-  });
-};
+// function updateSong() {
+//   $.ajax({
+//     type : 'GET',
+//     url: '/refresh'
+//   });
+// };
+//
+// setInterval(updateSong, 3000);
 
-setInterval(updateSong, 3000);
+
 
 });

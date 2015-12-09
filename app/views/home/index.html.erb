@@ -1,126 +1,46 @@
-<!-- PRELOADER -->
-<div class="page-loader">
-  <div class="loader">Loading..</div>
-</div>
-<!-- /PRELOADER -->
+<div class="hero-caption">
+    <div class="hero-text">
 
-<!-- OVERLAY MENU -->
-<div id="overlay-menu" class="overlay-menu">
+<!-- SELECT CHANNEL   -->
+      <div id="select-channel" class="page">
+      <a href="#" id="select-stream-1"><h2>Channel 1 - Deep Frequencies</h2>
+      <h4>Grooves, dub forms, techno</h4></a>
+      <a href="#" id="select-stream-2"><h2>Channel 2 - Light Frequencies</h2>
+      <h4>Ambient, Textures, Misc rhythms</h4></a>
+      </div>
 
-  <a href="#" id="overlay-menu-hide" class="navigation-hide"><i class="ion-close-round"></i></a>
+<!-- /SELECT CHANNEL -->
 
-  <div class="overlay-menu-inner">
-    <nav class="overlay-menu-nav">
+<!-- STREAM DATA   -->
+      <div id="stream-data" class="page">
+        <h4>currently playing:</h4>
+      <%= render "stream_data" %>
+      </div>
 
-      <ul id="nav">
+<!-- /STREAM DATA -->
 
-        <li class="slidedown">
-          <a href="#">Select Channel</a>
-        </li>
-        <li class="slidedown">
-          <a href="#">Favorites</a>
-        </li>
-        <li class="slidedown">
-          <a href="#">FAQ</a>
-        </li>
+<!-- LOG IN -->
 
-        <li><a href="contact.html">Contact</a></li>
+<div id="log-in" class="page">
+    <h2>Log in</h2>
 
-      </ul>
-
-    </nav>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :email, required: false, autofocus: true %>
+    <%= f.input :password, required: false %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="overlay-navigation-footer">
-    <div class="container">
-      <div class="row">
+  <div class="form-actions">
+    <%= f.button :submit, "Log in" %>
+  </div>
+<% end %>
 
-        <div class="col-sm-12 text-center">
-          <p class="copyright font-alt m-b-0">© Softsounds</p>
+<%= render "devise/shared/links" %>
 
-        </div>
-      </div>
-    </div>
+</div>
+
+<!-- LOG IN -->
+
   </div>
 </div>
-
-<!-- /OVERLAY MENU -->
-
-<!-- WRAPPER -->
-<div class="wrapper">
-
-  <!-- NAVIGATION -->
-  <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
-
-    <div class="container">
-      <div class="navbar-header">
-        <a href="/">
-          <span class="navbar-brand">softsounds</span>
-        </a>
-      </div>
-
-      <!-- ICONS NAVBAR -->
-      <ul id="icons-navbar" class="nav navbar-nav navbar-right">
-        <li>
-          <a href="#" id="toggle-menu" class="show-overlay" title="Menu">
-            <span id="menubox"></span>
-
-          </a>
-        </li>
-      </ul>
-      <!-- /ICONS NAVBAR -->
-
-      <ul class="extra-navbar nav navbar-nav navbar-right">
-        <li>
-          <a href="#" title="Menu">
-            Log In
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Menu">
-            Sign Up
-          </a>
-        </li>
-      </ul>
-    </div>
-
-  </nav>
-  <!-- /NAVIGATION -->
-
-  <!-- HERO -->
-  <section id="hero" class="module-hero module-full-height" data-background="softsounds.jpg">
-
-    <!-- HERO TEXT -->
-    <div class="hero-caption">
-      <div class="hero-text">
-
-        <div id="stream-data">
-        <%= render "stream_data" %>
-        </div>
-        <div id="song-info"><span id="info"></span><span id="heart-empty"></span></div>
-
-      </div>
-    </div>
-    <!-- /HERO TEXT -->
-
-  </section>
-  <!-- /HERO -->
-
-  <section class="footer">
-
-      <section id="footer-player">
-
-        <div id="speaker"><a href="javascript:;"></a></div>
-        <div id="play-back"><a href="javascript:;"></a></div>
-        <div id="play"><a href="javascript:;"></a></div>
-        <div id="play-forward"><a href="javascript:;"></a></div>
-        <div id="share"><a href="javascript:;"></a></div>
-
-        <div id="jplayer" class="jp-jplayer"></div>
-
-      </section>
-
-  </section>
-
-</div>
-<!-- /WRAPPER -->

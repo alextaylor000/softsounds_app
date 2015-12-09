@@ -93,7 +93,7 @@
 			}
 		}
 
-	
+
 		/* ---------------------------------------------- /*
 		 * Transparent navbar animation
 		/* ---------------------------------------------- */
@@ -131,6 +131,53 @@
 			hideMenu();
 			$('body').removeClass('aux-navigation-active');
 			return false;
+		});
+
+		$('#channel-page').on('click', function() {
+		  hideMenu();
+			$('.page').fadeOut(100).hide().css("opacity", "0");
+			$("#select-channel").css('display', "block").fadeTo(100, "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
+		});
+
+		$('#select-stream-1').on('click', function() {
+			$('.page').hide().css("opacity", "0");;
+			$("#stream-data").css('display', "block").fadeTo(200, "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
+		});
+
+		$('#select-stream-2').on('click', function() {
+		  hideMenu();
+			$('.page').fadeOut(200).hide().css("opacity", "0");;
+			$("#stream-data").css('display', "block").css("opacity", "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
+		});
+
+		$('#favorite-page').on('click', function() {
+		  hideMenu();
+			$('.page').fadeOut(200).hide().css("opacity", "0");;
+			$("#favorites").css('display', "block").css("opacity", "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
+		});
+
+		$('#faq-page').on('click', function() {
+		  hideMenu();
+			$('.page').fadeOut(200).hide().css("opacity", "0");;
+			$("#faq").css('display', "block").css("opacity", "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
+		});
+
+		$('#contact-page').on('click', function() {
+		  hideMenu();
+			$('.page').fadeOut(200).hide();
+			$("#contact").css('display', "block").css("opacity", "1");
+		  $('body').removeClass('aux-navigation-active');
+		  return false;
 		});
 
 		$(window).keydown(function(e) {

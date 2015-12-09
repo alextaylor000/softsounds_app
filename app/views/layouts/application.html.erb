@@ -8,7 +8,119 @@
   </head>
 <body>
 
-<%= yield %>
+  <!-- PRELOADER -->
+  <div class="page-loader">
+    <div class="loader">Loading..</div>
+  </div>
+  <!-- /PRELOADER -->
 
+  <!-- OVERLAY MENU -->
+  <div id="overlay-menu" class="overlay-menu">
+
+    <a href="#" id="overlay-menu-hide" class="navigation-hide"><i class="ion-close-round"></i></a>
+
+    <div class="overlay-menu-inner">
+      <nav class="overlay-menu-nav">
+
+        <ul id="nav">
+
+          <li class="slidedown">
+            <a href="#" id="channel-page">Select Channel</a>
+          </li>
+          <li class="slidedown">
+            <a href="#" id="favorite-page">Favorites</a>
+          </li>
+          <li class="slidedown">
+            <a href="#" id="faq-page">FAQ</a>
+          </li>
+          <li>
+            <a href="#" id="contact-page">Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+    </div>
+
+    <div class="overlay-navigation-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-12 text-center">
+            <p class="copyright font-alt m-b-0">© Softsounds</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /OVERLAY MENU -->
+
+  <!-- WRAPPER -->
+  <div class="wrapper">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
+
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/">
+            <span class="navbar-brand">softsounds</span>
+          </a>
+        </div>
+
+        <!-- RIGHT NAVBAR -->
+        <ul id="icons-navbar" class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" id="toggle-menu" class="show-overlay" title="Menu">
+              <span id="menubox"></span>
+
+            </a>
+          </li>
+        </ul>
+        <!-- /RIGHT NAVBAR -->
+
+        <ul class="extra-navbar nav navbar-nav navbar-right">
+          <li>
+              <%= link_to "Log In", sign_in_path %>
+          </li>
+          <li>
+            <a href="#" title="Menu">
+              Sign Up
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+    <!-- /NAVIGATION -->
+
+    <!-- HERO -->
+    <section id="hero" class="module-hero module-full-height" data-background="softsounds.jpg">
+
+    <%= yield %>
+
+    </section>
+    <!-- /HERO -->
+
+    <section class="footer">
+
+        <section id="footer-player">
+
+          <div id="speaker"><a href="javascript:;"></a></div>
+          <div id="play-back"><a href="javascript:;"></a></div>
+          <div id="play"><a href="javascript:;"></a></div>
+          <div id="play-forward"><a href="javascript:;"></a></div>
+          <div id="share"><a href="javascript:;"></a></div>
+
+          <div id="jplayer" class="jp-jplayer"></div>
+
+        </section>
+
+    </section>
+
+</div>
+<!-- /WRAPPER -->
 </body>
 </html>
