@@ -1,7 +1,7 @@
 <div class="hero-caption">
     <div class="hero-text">
 
-
+    <% if user_signed_in? %>
 <!-- SELECT CHANNEL   -->
       <div id="select-channel" class="page">
         <div id="stream-1">
@@ -16,11 +16,19 @@
      </div>
 <!-- /SELECT CHANNEL -->
 
+    <% else %>
+<!-- SPLASH SCREEN -->
+      <div id="splash" class="page">
+        <h1>softsounds</h1>
+        <h4>Log In | Listen</h4>
+      </div>
+<!-- /SPLASH SCREEN -->
+   <% end %>
 
 <!-- STREAM DATA   -->
       <div id="stream-data" class="page">
-        <h4>currently playing:</h4>
         <%= render "stream_data" %>
+      <div id="track-info"><span class="info"></span><span class="favorite"></span></div>
       </div>
 <!-- /STREAM DATA -->
 

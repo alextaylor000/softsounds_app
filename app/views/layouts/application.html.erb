@@ -82,13 +82,19 @@
         <!-- /RIGHT NAVBAR -->
 
         <ul class="extra-navbar nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
           <li>
-              <a href="#" id="log-in-page">Sign In</a>
+              <a href="#" id="sign-out">Sign Out</a>
+          </li>
+          <% else %>
+          <li>
+              <a href="#" id="log-in-page">Log In</a>
           </li>
           <li>
             <a href="#" id="sign-up-page">Sign Up</a>
             </a>
           </li>
+          <% end %>
         </ul>
       </div>
 

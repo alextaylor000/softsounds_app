@@ -24,7 +24,7 @@ button {
 
 #select-channel {
   transition: opacity .3s ease-in-out;
-  margin-top: -75px;
+  margin-top: -70px;
   backface-visibility: hidden;
 }
 
@@ -49,14 +49,14 @@ button {
   transition: .3s ease-in-out;
 }
 
-#song-info {
+#track-info {
   position: relative;
   text-align: center;
   vertical-align: middle;
   margin-top: 50px;
 }
 
-#info {
+.info {
   background: url('info.png') no-repeat;
   background-size: 24px 24px;
   width: 24px;
@@ -66,7 +66,7 @@ button {
   margin-right: 25px;
 }
 
-#heart-empty {
+.favorite {
   background: url('heart_empty.png') no-repeat;
   background-size: 24px 24px;
   width: 24px;
@@ -74,6 +74,18 @@ button {
   backface-visibility: hidden;
   display: inline-block;
   margin-left: 25px;
+  cursor: pointer;
+}
+
+.favorited {
+  background: url('heart_full.png') no-repeat;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+  backface-visibility: hidden;
+  display: inline-block;
+  margin-left: 25px;
+  cursor: pointer;
 }
 
 #log-in {
@@ -110,6 +122,11 @@ button {
 #contact {
   display: none;
   opacity: 0;
+  transition: .3s ease-in-out;
+  margin-top: -75px;
+}
+
+#splash {
   transition: .3s ease-in-out;
   margin-top: -75px;
 }
