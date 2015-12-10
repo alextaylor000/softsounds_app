@@ -48,7 +48,6 @@
       <%= f.button :submit, "Log in" %>
     </div>
     <% end %>
-
     <%= render "devise/shared/links" %>
 </div>
 <!-- LOG IN -->
@@ -70,8 +69,6 @@
     <%= f.button :submit, "Sign up" %>
     </div>
     <% end %>
-
-    <%= render "devise/shared/links" %>
 </div>
 <!-- /SIGN UP -->
 
@@ -80,12 +77,18 @@
 <div id="favorites" class="page">
   <div id="favorites-list-box">
     <div id="favorites-list">
-    <h2>Favorites</h2>
-  <% @favorites.each do |song| %>
-  <p class="favsongs"><%= song.artist %> - <%= song.track %></p>
+    <h2 class="ultralight">Favorites <span style="font-size: 14px" class="sort-header">(sort by Artist)</span></h2>
+    <table>
+        <% @favorites.each do |song| %>
+      <tr>
+        <td>
+  <p class="favsongs"><%= song.artist %> - <%= song.track %> <span class="float-right">icon | icon</span></p>
+      </td>
+    </tr>
   <% end %>
+  </table>
    </div>
-  <div>
+</div>
 </div>
 <!-- /FAVORITES -->
 

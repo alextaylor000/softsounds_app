@@ -208,6 +208,7 @@
 			$("#stream-2").css("opacity", ".3");
 		})
 
+
 		$(window).keydown(function(e) {
 			if (overlayMenu.hasClass('active')) {
 				if (e.which === 27) {

@@ -113,8 +113,8 @@ button {
 }
 
 #faq {
-  display: none;
-  opacity: 0;
+  // display: none;
+  opacity: 1;
   transition: .3s ease-in-out;
   margin-top: -75px;
 }
@@ -132,20 +132,37 @@ button {
 }
 
 #favorites-list-box {
-  position: absolute;
-  top: 50%;
-  left: auto;
-  right: auto;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
   overflow: auto;
-  height:500px;
-  width: 700px;
-  background: rgba(32,56,59,.3);
+  height:495px;
+  width: 60%;
+  background: rgba(32,56,59,.35);
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  #favorites-list-box {
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  #favorites-list-box {
+    width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  #favorites-list-box {
+    width: 60%;
+  }
 }
 
 #favorites-list {
   text-align: left;
   position: relative;
-  padding-left: 25px;
 }
 
 .favsongs {
@@ -1591,6 +1608,7 @@ Navigation
 	visibility: hidden;
 	z-index: 9999;
 	opacity: 0;
+  backface-visibility: hidden;
 }
 
 .overlay-menu.active {
@@ -1646,24 +1664,33 @@ Navigation
 	list-style: none;
 	padding: 0;
 	margin: 0;
+  margin-top: -32px;
+  line-height: 37px;
 }
 
 #nav > li > a {
-	font-family: "Dosis", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-size: 24px;
-	color: #FDFDFD;
+	font-size: 23px;
+	color: rgba(253,253,253,0.9);
+  transition: .2s ease-in-out;
+  backface-visibility: hidden;
+}
+
+#nav li a:hover {
+  backface-visibility: hidden;
 }
 
 #nav li a:hover, #nav li a.active {
-	color: #fff;
+  backface-visibility: hidden;
 }
 
 #nav li ul {
 	display: none;
 	padding: 5px 0;
 	margin: 5px 0 10px;
+  backface-visibility: hidden;
 }
 
 #nav li ul li a {
@@ -1673,6 +1700,7 @@ Navigation
 	letter-spacing: 2px;
 	font-size: 11px;
 	color: #666;
+  backface-visibility: hidden;
 }
 
 /* ------------------------------------------------------------------
