@@ -131,6 +131,28 @@ button {
   margin-top: -75px;
 }
 
+#favorites-list-box {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: auto;
+  overflow: auto;
+  height:500px;
+  width: 700px;
+  background: rgba(32,56,59,.3);
+}
+
+#favorites-list {
+  text-align: left;
+  position: relative;
+  padding-left: 25px;
+}
+
+.favsongs {
+  color: #eee;
+
+}
+
 
 /* ------------------------------------------------------------------
 Player

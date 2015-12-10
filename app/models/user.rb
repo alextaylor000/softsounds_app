@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :favorites, dependent: :destroy
-  has_many :favorite_songs, through: :favorites
+  has_many :favorite_songs, through: :favorites, source: :song
 end

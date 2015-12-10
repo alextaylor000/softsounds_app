@@ -28,7 +28,7 @@
 <!-- STREAM DATA   -->
       <div id="stream-data" class="page">
         <%= render "stream_data" %>
-      <div id="track-info"><span class="info"></span><span class="favorite"></span></div>
+      <div id="track-info"><span class="info"></span><span class="favorite favorite-button"></span></div>
       </div>
 <!-- /STREAM DATA -->
 
@@ -78,7 +78,14 @@
 
 <!-- FAVORITES -->
 <div id="favorites" class="page">
-  <h2>Favorites</h2>
+  <div id="favorites-list-box">
+    <div id="favorites-list">
+    <h2>Favorites</h2>
+  <% @favorites.each do |song| %>
+  <p class="favsongs"><%= song.artist %> - <%= song.track %></p>
+  <% end %>
+   </div>
+  <div>
 </div>
 <!-- /FAVORITES -->
 

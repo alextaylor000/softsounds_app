@@ -27,9 +27,12 @@ class FavoritesController < ApplicationController
 
     def destroy
       song = Song.find_by_track(params[:track])
-      favorite = current_user.favorites.find(params[:id])
-      favorite.destroy
-      render json: {succes: :true}
+      #favorite = current_user.favorites.find(params[:id])
+      favorite = current_user.favorites.find_by(song: song)
+      if favorite
+        favorite.destroy
+        render json: {success: :true}
+      end
     end
 
 end

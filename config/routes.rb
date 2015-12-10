@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   get "/refresh" => "home#refresh"
 
-  resources :favorites, only: [:create, :show, :index, :destroy]
+  delete "/favorites" => "favorites#destroy"
+
+  resources :favorites, only: [:create, :show, :index]
 
   devise_scope :user do
     get "sign_in", to: "devise/sessions#new"

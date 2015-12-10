@@ -1,39 +1,52 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-  $(".favorite").on("click", function(){
-    console.log("post");
-  $.ajax({
-    method: "POST",
-    url: "/favorites",
-    data: {
-      track: $("#track-data").html(),
-      artist: $("#artist-data").html()
-    },
-    success: function() {
-      $(".favorite").addClass("favorited").removeClass("favorite");
-    },
-    error: function() {
-      alert("try again!");
+  $(".favorite-button").on("click", function(){
+    // console.log("favorite button clicked");
+    var classes = $(this).attr("class").split(" ");
+    // console.log(classes);
+
+  //debugger;
+    if (classes.indexOf("favorite") >= 0) {
+      // console.log('favoriting');
+      favorite();
+    } else if (classes.indexOf("favorited") >=0) {
+      // console.log('unfavoriting');
+      unfavorite();
     }
   });
-});
 
-  $(".favorited").on("click", function(){
-    console.log("delete");
-  $.ajax({
-    method: "DELETE",
-    url: "/favorites",
-    data: {
-      track: $("#track-data").html()
+  var favorite = function() {
+    $.ajax({
+      method: "POST",
+      url: "/favorites",
+      data: {
+        track: $("#track-data").html(),
+        artist: $("#artist-data").html()
       },
-    success: function() {
-      $(".favorited").addClass("favorite").removeClass("favorited");
-    },
-    error: function() {
-      alert("try again!");
-    }
-  });
-});
+      success: function() {
+        $(".favorite").addClass("favorited").removeClass("favorite");
+      },
+      error: function() {
+        alert("try again!");
+      }
+    });
+  }
+
+  var unfavorite = function() {
+    $.ajax({
+      method: "DELETE",
+      url: "/favorites",
+      data: {
+        track: $("#track-data").html()
+        },
+      success: function() {
+        $(".favorited").addClass("favorite").removeClass("favorited");
+      },
+      error: function() {
+        alert("try again!");
+      }
+    });
+  }
 
 // $.ajax({
 //   method: "GET",
@@ -43,7 +56,7 @@ $(document).ready(function(){
 //     artist_title: $("#artist-data").html()
 //   },
 //   success: function() {
-//     $(".favorite").addClass("favourited");
+//     $(".favorite").addClass("favorited");
 //   },
 //   error: function() {
 //     alert("try again");
