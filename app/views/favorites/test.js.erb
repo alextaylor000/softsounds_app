@@ -1,0 +1,4 @@
+$("#favorites").replaceWith("<%= j render "favorites/favorite_fill" %>");
+$("#userfav").replaceWith('<span id="userfav"><%= "#{current_user.favorite_posts.count}" %></span>');
+
+$(".favorite").delay(800).addClass("favorited").removeClass("favorite");

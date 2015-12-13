@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :users
+
   root "home#index"
 
   get "/refresh" => "home#refresh"
@@ -13,8 +14,10 @@ Rails.application.routes.draw do
   resources :favorites, only: [:create, :show, :index]
 
   devise_scope :user do
-    get "sign_in", to: "devise/sessions#new"
-    get "sign_up", to: "devise/registrations#new"
+    get "sign_in",  to: "devise/sessions#new"
+    get "sign_up",  to: "devise/registrations#new"
+    get "sign_out", to: "devise/sessions#destroy"
   end
+
 
 end

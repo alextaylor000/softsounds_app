@@ -208,6 +208,25 @@
 			$("#stream-2").css("opacity", ".3");
 		})
 
+		$(".navbar-brand").on("click", function() {
+			hideMenu();
+			$('.page').fadeOut(200).hide();
+			$("#select-channel").css('display', "block").fadeTo(200, "1");
+		  $('body').removeClass('aux-navigation-active');
+		})
+
+		$(".page-close").on("click", function() {
+			$('.page').fadeOut(200).hide();
+			$("#stream-data").css('display', "block").fadeTo(200, "1");
+		  $('body').removeClass('aux-navigation-active');
+		})
+
+		$(".fav-menu").on("click", function() {
+			$('.page').fadeOut(200).hide();
+			$("#favorites").css('display', "block").fadeTo(200, "1");
+		  $('body').removeClass('aux-navigation-active');
+		})
+
 
 		$(window).keydown(function(e) {
 			if (overlayMenu.hasClass('active')) {

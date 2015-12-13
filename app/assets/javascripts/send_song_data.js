@@ -24,10 +24,10 @@ $(document).ready(function() {
         artist: $("#artist-data").html()
       },
       success: function() {
-        $(".favorite").addClass("favorited").removeClass("favorite");
+        $(".favorite").delay(800).addClass("favorited").removeClass("favorite");
       },
       error: function() {
-        alert("try again!");
+        alert("Please sign in!");
       }
     });
   }
@@ -43,7 +43,7 @@ $(document).ready(function() {
         $(".favorited").addClass("favorite").removeClass("favorited");
       },
       error: function() {
-        alert("try again!");
+        alert("Please sign in!");
       }
     });
   }

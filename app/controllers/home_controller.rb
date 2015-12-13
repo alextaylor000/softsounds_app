@@ -5,7 +5,9 @@ class HomeController < ApplicationController
   def index
     @stream = Shoutout::Stream.new("http://rosetta.shoutca.st:9233/stream")
     @stream.connect
+    if user_signed_in?
     @favorites = current_user.favorite_songs
+    end
   end
 
   def refresh

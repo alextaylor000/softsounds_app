@@ -7,8 +7,6 @@ Version: 1.0.2
 @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400italic");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700");
 
-
-
 /* ------------------------------------------------------------------
 Main page
 ------------------------------------------------------------------ */
@@ -22,10 +20,85 @@ button {
   outline: none;
 }
 
+.intro-button {
+  margin:auto;
+  border:2px solid #188eda;
+  padding:13px 15px;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:1.5px;
+  border-radius:20px;
+  text-transform:uppercase;
+  color:#188eda;
+  height:43px
+}
+
+.intro-button:hover {
+  color:#fff;
+  background:#188eda;
+  border-color:#188eda
+}
+
+.download-link {
+  background: url(download_link.png) no-repeat;
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-bottom: -8px;
+  opacity: .7;
+  transition: .3s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.download-link:hover {
+  opacity: 1;
+}
+
+.artist-link {
+  background: url(artist_link.png) no-repeat;
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-bottom: -8px;
+  margin-right: 8px;
+  opacity: .7;
+  transition: .3s ease-in-out;
+  backface-visibility: hidden;
+}
+
+#log-out {
+  font-size: 16px!important;
+  color: white;
+}
+
+.artist-link:hover {
+  opacity: 1;
+}
+
+.page-close {
+  background: url(ico-21-page-close.png) no-repeat;
+  background-size: 20px 20px;
+  opacity: .4;
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 18px;
+  margin-top: 11px;
+  transition: .3s ease-in-out;
+}
+
+.page-close:hover {
+  opacity: .8;
+}
+
 #select-channel {
   transition: opacity .3s ease-in-out;
-  margin-top: -70px;
+  margin-top: -75px;
   backface-visibility: hidden;
+  display: block;
 }
 
 #now-playing {
@@ -42,11 +115,13 @@ button {
 
 #stream-1 {
   transition: .3s ease-in-out;
+  cursor: pointer;
 }
 
 #stream-2 {
   opacity: .3;
   transition: .3s ease-in-out;
+  cursor: pointer;
 }
 
 #track-info {
@@ -64,6 +139,13 @@ button {
   backface-visibility: hidden;
   display: inline-block;
   margin-right: 25px;
+  opacity: .6;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.info:hover {
+  opacity: 1;
 }
 
 .favorite {
@@ -75,6 +157,77 @@ button {
   display: inline-block;
   margin-left: 25px;
   cursor: pointer;
+  overflow: visible;
+	-webkit-transition: .5s;
+	transition: .5s;
+  color: white;
+  }
+
+@-webkit-keyframes anim-effect-novak {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.1, 0.1, 1);
+		transform: scale3d(0.1, 0.1, 1);
+	}
+	99.99% {
+		opacity: 0;
+		-webkit-transform: scale3d(2, 2, 1);
+		transform: scale3d(2, 2, 1);
+	}
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-effect-novak {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.9, 0.9, 1);
+		transform: scale3d(0.9, 0.9, 1);
+	}
+	99.99% {
+		opacity: 0;
+		-webkit-transform: scale3d(2, 2, 1);
+		transform: scale3d(2, 2, 1);
+	}
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+  }
 }
 
 .favorited {
@@ -86,13 +239,42 @@ button {
   display: inline-block;
   margin-left: 25px;
   cursor: pointer;
+  -webkit-transition: 1s;
+	transition: 1s;
+  color: white;
+  transform-origin: center;
+  -webkit-animation: anim-effect-novak 1s forwards;
+	animation: anim-effect-novak 1s forwards;
+}
+
+
+.nav-heart {
+  background: url('heart_full.png') no-repeat;
+  background-size: 13px 13px;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 6px;
+  margin-bottom: -1px;
+}
+
+.fav-menu {
+  margin-top: 14px;
+  margin-right: 5px;
+
+}
+
+#userfavs {
+  color: white;
+  font-size: 13px;
 }
 
 #log-in {
   display: none;
   opacity: 0;
   transition: opacity .3s ease-in-out;
-  margin-top: -75px;
+  margin-top: -85px;
   backface-visibility: hidden;
 }
 
@@ -100,7 +282,7 @@ button {
   display: none;
   opacity: 0;
   transition: opacity .3s ease-in-out;
-  margin-top: -75px;
+  margin-top: -85px;
   backface-visibility: hidden;
 }
 
@@ -113,8 +295,8 @@ button {
 }
 
 #faq {
-  // display: none;
-  opacity: 1;
+  display: none;
+  opacity: 0;
   transition: .3s ease-in-out;
   margin-top: -75px;
 }
@@ -134,17 +316,19 @@ button {
 #favorites-list-box {
   position: relative;
   margin: auto;
-  margin-top: 100px;
-  overflow: auto;
-  height:495px;
+  margin-top: 90px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 450px;
   width: 60%;
-  background: rgba(32,56,59,.35);
+  background: rgba(32,56,59,.3);
   border-radius: 5px;
 }
 
 @media (max-width: 600px) {
   #favorites-list-box {
     width: 100%;
+    height: 350px;
   }
 }
 
@@ -168,6 +352,10 @@ button {
 .favsongs {
   color: #eee;
 
+}
+
+#forgot-password {
+  margin-top: 10px;
 }
 
 
@@ -340,7 +528,6 @@ body {
 	font: 400 14px/1.8 "Open Sans", sans-serif;
 	color: #777;
 	overflow-x: hidden;
-	-ms-overflow-style: scrollbar;
 }
 
 img {
@@ -549,7 +736,6 @@ blockquote.serif-quote {
 /* ------------------------------------------------------------------
 Forms
 ------------------------------------------------------------------- */
-
 .form-control {
 	border: 2px solid #eee;
 	height: 33px;
@@ -585,6 +771,7 @@ Forms
 	font-size: 10px;
 }
 
+
 /* ------------------------------------------------------------------
 Buttons
 ------------------------------------------------------------------- */
@@ -603,7 +790,6 @@ Buttons
 .btn.focus, .btn:focus,
 .btn.active.focus, .btn.active:focus,
 .btn:active.focus, .btn:active:focus {
-	background: none;
 	outline: 0;
 }
 
@@ -1451,7 +1637,7 @@ Navigation
   position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 70px;
+	height: 65px;
 	background: rgba(34,34,34,.2);
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -1477,7 +1663,7 @@ Navigation
 	color: #fff;
 	font-family: 'montserratultra_light';
 	text-transform: lowercase!important;
-	margin-top: 2px;
+	margin-top: 3px;
   line-height: 24px;
   -webkit-font-smoothing: antialiased !important;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -1487,7 +1673,7 @@ Navigation
 }
 
 .navbar-custom .navbar-brand:hover {
-	 opacity: .7;
+	 opacity: .8;
    }
 
 .navbar-custom a {
@@ -1709,12 +1895,11 @@ Hero
 
 .module-hero {
 	position: relative;
-	background-repeat: no-repeat;
-	background-position: center center;
+  background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-  background: url(softsounds.jpg) no-repeat center fixed ;
+  background: url(softsounds.jpg) no-repeat center center fixed;
 	// background: linear-gradient(270deg, #246655, #337895);
   // background-size: 400% 400%;
   // -webkit-animation: AnimationName 10s ease infinite;

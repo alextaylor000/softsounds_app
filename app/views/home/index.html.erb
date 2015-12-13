@@ -1,17 +1,17 @@
 <div class="hero-caption">
     <div class="hero-text">
 
-    <% if user_signed_in? %>
+      <% if user_signed_in? %>
 <!-- SELECT CHANNEL   -->
       <div id="select-channel" class="page">
         <div id="stream-1">
-        <a href="#" id="select-stream-1" class="play"><h2>Channel 1 - Deep Frequencies</h2>
-        <h4>Dub forms, Rhythms, Techno</h4></a>
+        <a href="#" id="select-stream-1" class="play"><h2>Channel 1 - Light Frequencies</h2>
+        <h4>Ambient, Textures, Misc Rhythms</h4></a>
       </div>
         <br/>
         <div id="stream-2">
-        <a href="#" id="select-stream-2"><h2>Channel 2 - Light Frequencies</h2>
-        <h4>Ambient, Experiemental, Textures</h4></a>
+        <a href="#" id="select-stream-2"><h2>Channel 2 - Deep Frequencies</h2>
+        <h4>Dub forms, Beats, Techno</h4></a>
       </div>
      </div>
 <!-- /SELECT CHANNEL -->
@@ -32,36 +32,35 @@
       </div>
 <!-- /STREAM DATA -->
 
-
 <!-- LOG IN -->
 <div id="log-in" class="page">
-    <h2>Log in</h2>
+    <h2 style="padding-bottom: 10px">Log in</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
-      <%= f.input :email, required: false, autofocus: true %>
-      <%= f.input :password, required: false %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <%= f.input :email, required: true, autofocus: true %>
+      <%= f.input :password, required: true %>
     </div>
 
     <div class="form-actions">
       <%= f.button :submit, "Log in" %>
     </div>
     <% end %>
-    <%= render "devise/shared/links" %>
+    <br/>
+    <div id="forgot-password"><%= render "devise/shared/links" %></div>
 </div>
 <!-- LOG IN -->
 
 
 <!-- SIGN UP -->
 <div id="sign-up" class="page">
-    <h2>Sign up</h2>
+    <h2 style="padding-bottom: 10px">Sign up</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
 
     <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :username, required: true %>
+    <%= f.input :email, required: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     </div>
 
@@ -72,24 +71,31 @@
 </div>
 <!-- /SIGN UP -->
 
-
 <!-- FAVORITES -->
 <div id="favorites" class="page">
-  <div id="favorites-list-box">
-    <div id="favorites-list">
-    <h2 class="ultralight">Favorites <span style="font-size: 14px" class="sort-header">(sort by Artist)</span></h2>
+<% if user_signed_in? %>
+    <div id="favorites-list-box">
+      <div id="favorites-list">
+    <h2 class="ultralight">Favorites
+    <span style="font-size: 14px" class="sort-header">(sort by Artist)</span>
+    <span class="page-close float-right"><span></h2>
     <table>
         <% @favorites.each do |song| %>
       <tr>
         <td>
-  <p class="favsongs"><%= song.artist %> - <%= song.track %> <span class="float-right">icon | icon</span></p>
+          <p class="favsongs"><%= song.artist %> - <%= song.track %>
+          <span class="float-right"><i class="artist-link"> </i>
+                                    <i class="download-link"> </i></span></p>
       </td>
-    </tr>
-  <% end %>
-  </table>
-   </div>
-</div>
-</div>
+     </tr>
+     <% end %>
+    </table>
+    </div>
+    </div>
+      <% else %>
+        <h2>Please Sign In!</h2>
+      <% end %>
+    </div>
 <!-- /FAVORITES -->
 
 <!-- FAQ -->

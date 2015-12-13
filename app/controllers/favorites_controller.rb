@@ -22,10 +22,13 @@ class FavoritesController < ApplicationController
       favorite.user = current_user
       favorite.song = song
       favorite.save
-      render json: {success: true}
+      respond_to do |format|
+      format.js { render :test }
+      end
     end
 
-    def destroy
+
+      def destroy
       song = Song.find_by_track(params[:track])
       #favorite = current_user.favorites.find(params[:id])
       favorite = current_user.favorites.find_by(song: song)

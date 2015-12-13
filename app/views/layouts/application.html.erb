@@ -45,8 +45,10 @@
     <div class="overlay-navigation-footer">
       <div class="container">
         <div class="row">
-
           <div class="col-sm-12 text-center">
+            <% if user_signed_in? %>
+              <a href="#" id="log-out">LOG OUT</a>
+            <% end %>
             <p class="copyright font-alt m-b-0">© Softsounds</p>
 
           </div>
@@ -65,9 +67,7 @@
 
       <div class="container">
         <div class="navbar-header">
-          <a href="/">
-            <span class="navbar-brand">softsounds</span>
-          </a>
+          <span class="navbar-brand">softsounds</span>
         </div>
 
         <!-- RIGHT NAVBAR -->
@@ -84,7 +84,7 @@
         <ul class="extra-navbar nav navbar-nav navbar-right">
           <% if user_signed_in? %>
           <li>
-              <a href="#" id="sign-out">Sign Out</a>
+          <div class="fav-menu"><i class="nav-heart"></i><span id="userfavs"><%= "#{current_user.favorite_songs.count}" %></span></div>
           </li>
           <% else %>
           <li>
