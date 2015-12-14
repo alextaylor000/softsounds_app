@@ -14,19 +14,33 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
+//= require particles
 //= require_tree .
+
+
+   particlesJS.load('particles-js', 'assets/particle.json', function() {
+      console.log('callback - particles.js config loaded');
+   });
+
 
 $(document).ready(function(){
 
-// function updateSong() {
+// function updateStream1() {
 //   $.ajax({
 //     type : 'GET',
-//     url: '/refresh'
+//     url: '/refresh_stream1'
 //   });
 // };
 //
-// setInterval(updateSong, 3000);
+// function updateStream2() {
+//   $.ajax({
+//     type : 'GET',
+//     url: '/refresh_stream2'
+//   });
+// };
 //
+// setInterval(updateStream1, 7000);
+// setInterval(updateStream2, 7000);
 
 
 });

@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  get "/refresh" => "home#refresh"
+  get "/refresh_stream1" => "home#refresh_stream1"
+  get "/refresh_stream2" => "home#refresh_stream2"
 
   delete "/favorites" => "favorites#destroy"
 

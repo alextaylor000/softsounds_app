@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col-sm-12 text-center">
             <% if user_signed_in? %>
-              <a href="#" id="log-out">LOG OUT</a>
+              <span><%= link_to "LOG OUT", sign_out_path, id: "log-out" %></span>
             <% end %>
             <p class="copyright font-alt m-b-0">© Softsounds</p>
 
@@ -64,9 +64,8 @@
 
   <!-- WRAPPER -->
   <div class="wrapper">
-      <div id="particles-js"></div>
 
-    <!-- NAVIGATION -->
+      <!-- NAVIGATION -->
     <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
 
       <div class="container">
@@ -107,7 +106,8 @@
 
     <!-- HERO -->
     <section id="hero" class="module-hero module-full-height" data-background="softsounds.jpg">
-
+      <div id="particles-js">
+        </div>
     <%= yield %>
 
     </section>

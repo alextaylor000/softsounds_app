@@ -6,8 +6,8 @@
   <tr>
     <td>
       <p class="favsongs"><%= song.artist %> - <%= song.track %>
-      <span class="float-right"><a target="_blank" href="<%= song.artist_link%>"><i class="artist-link"> </i></a>
-                                <a target="_blank" href="<%= song.track_link%>"><i class="download-link"></i></a></span></p>
+      <span class="float-right"><a target="_blank" title="Artist Soundcloud" href="<%= song.artist_link%>"><i class="artist-link"> </i></a>
+                                <a target="_blank" title="Download Track"href="<%= song.track_link%>"><i class="download-link"></i></a></span></p>
   </td>
  </tr>
  <% end %>

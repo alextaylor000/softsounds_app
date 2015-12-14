@@ -19,8 +19,11 @@
     <% else %>
 <!-- SPLASH SCREEN -->
       <div id="splash" class="page">
-        <h1>softsounds</h1>
-        <div class=".intro-button">Log In </div>| <div class=".intro-button"><h4>Log In </div>
+        <h1>softs<span class="light-blue">o</span>unds</h1>
+        <div class="intro-buttons">
+        <button class="button button--winona button--border-thin button--round-s" data-text="Log In"><span>Log In</span></button>
+        <button class="button button--winona button--border-thin button--round-s" data-text="Explore"><span>Explore</span></button>
+        </div>
       </div>
 <!-- /SPLASH SCREEN -->
    <% end %>
@@ -28,15 +31,15 @@
 <!-- STREAM DATA LIGHT  -->
       <div id="stream-data-1" class="page">
         <%= render "stream_data_1" %>
-      <div id="track-info"><span class="info"></span><span class="favorite favorite-button"></span></div>
       </div>
+      <div id="track-info-1" class="page"><span class="info"></span><span class="favorite favorite-button"></span></div>
 <!-- /STREAM DATA LIGHT-->
 
 <!-- STREAM DATA DEEP  -->
       <div id="stream-data-2" class="page">
         <%= render "stream_data_2" %>
-      <div id="track-info"><span class="info"></span><span class="favorite favorite-button"></span></div>
       </div>
+      <div id="track-info-2" class="page"><span class="info"></span><span class="favorite favorite-button"></span></div>
 <!-- /STREAM DATA DEEP-->
 
 <!-- LOG IN -->
