@@ -143,7 +143,7 @@
 
 		$('#select-stream-1').on('click', function() {
 			$('.page').hide().css("opacity", "0");
-			$("#stream-data").css('display', "block").fadeTo(200, "1");
+			$("#stream-data-1").css('display', "block").fadeTo(200, "1");
 			$(".footer").fadeTo(1000, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
@@ -151,7 +151,8 @@
 
 		$('#select-stream-2').on('click', function() {
 			$('.page').hide().css("opacity", "0");
-			$("#stream-data").css('display', "block").fadeTo(200, "1");
+			$("#stream-data-2").css('display', "block").fadeTo(200, "1");
+			$(".footer").fadeTo(1000, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
 		});
@@ -195,6 +196,16 @@
 		});
 
 		$("#select-stream-1").click(function() {
+			$("#jplayer").jPlayer("setMedia", {
+				mp3: "http://rosetta.shoutca.st:9368/stream"
+			});
+  		$("#jplayer").jPlayer("play").jPlayerFade().in(6000);
+		});
+
+		$("#select-stream-2").click(function() {
+			$("#jplayer").jPlayer("setMedia", {
+				mp3: "http://rosetta.shoutca.st:9233/stream"
+			});
   		$("#jplayer").jPlayer("play").jPlayerFade().in(6000);
 		});
 
@@ -215,9 +226,9 @@
 		  $('body').removeClass('aux-navigation-active');
 		})
 
-		$(".page-close").on("click", function() {
+		$("#favorites-list-box").on("click", ".page-close", function() {
 			$('.page').fadeOut(200).hide();
-			$("#stream-data").css('display', "block").fadeTo(200, "1");
+			$("#stream-data-1").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
 		})
 

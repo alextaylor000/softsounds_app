@@ -20,17 +20,24 @@
 <!-- SPLASH SCREEN -->
       <div id="splash" class="page">
         <h1>softsounds</h1>
-        <h4>Log In | Listen</h4>
+        <div class=".intro-button">Log In </div>| <div class=".intro-button"><h4>Log In </div>
       </div>
 <!-- /SPLASH SCREEN -->
    <% end %>
 
-<!-- STREAM DATA   -->
-      <div id="stream-data" class="page">
-        <%= render "stream_data" %>
+<!-- STREAM DATA LIGHT  -->
+      <div id="stream-data-1" class="page">
+        <%= render "stream_data_1" %>
       <div id="track-info"><span class="info"></span><span class="favorite favorite-button"></span></div>
       </div>
-<!-- /STREAM DATA -->
+<!-- /STREAM DATA LIGHT-->
+
+<!-- STREAM DATA DEEP  -->
+      <div id="stream-data-2" class="page">
+        <%= render "stream_data_2" %>
+      <div id="track-info"><span class="info"></span><span class="favorite favorite-button"></span></div>
+      </div>
+<!-- /STREAM DATA DEEP-->
 
 <!-- LOG IN -->
 <div id="log-in" class="page">
@@ -76,21 +83,8 @@
 <% if user_signed_in? %>
     <div id="favorites-list-box">
       <div id="favorites-list">
-    <h2 class="ultralight">Favorites
-    <span style="font-size: 14px" class="sort-header">(sort by Artist)</span>
-    <span class="page-close float-right"><span></h2>
-    <table>
-        <% @favorites.each do |song| %>
-      <tr>
-        <td>
-          <p class="favsongs"><%= song.artist %> - <%= song.track %>
-          <span class="float-right"><i class="artist-link"> </i>
-                                    <i class="download-link"> </i></span></p>
-      </td>
-     </tr>
-     <% end %>
-    </table>
-    </div>
+        <%= render "favorites/favorites_by_latest" %>
+        </div>
     </div>
       <% else %>
         <h2>Please Sign In!</h2>

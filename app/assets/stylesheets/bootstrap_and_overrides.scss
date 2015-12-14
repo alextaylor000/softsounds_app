@@ -6,21 +6,11 @@ p {
   margin: 0 0 9px!important;
 }
 
-.ultralight {
-  font-family: 'montserratultra_light';
-  padding-bottom: 25px;
-  padding-left: 25px;
-  backface-visibility: hidden;
-}
-
 table {
   width: 100%;
   backface-visibility: hidden;
   border-collapse:collapse;
-}
-
-.sort-header {
-  margin-left: 6px;
+  text-align: left;
 }
 
 .float-right {

@@ -1,0 +1,14 @@
+<h2 class="ultralight">Favorites
+<span style="font-size: 14px" class="sort-header">(sort by Latest)</span>
+<span class="page-close float-right"><span></h2>
+<table>
+    <% @favoriteartists.each do |song| %>
+  <tr>
+    <td>
+      <p class="favsongs"><%= song.artist %> - <%= song.track %>
+      <span class="float-right"><i class="artist-link"> </i>
+                                <i class="download-link"> </i></span></p>
+  </td>
+ </tr>
+ <% end %>
+</table>

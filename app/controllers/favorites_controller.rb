@@ -23,7 +23,7 @@ class FavoritesController < ApplicationController
       favorite.song = song
       favorite.save
       respond_to do |format|
-      format.js { render :test }
+      format.js { render :fav_confirm }
       end
     end
 
@@ -33,9 +33,11 @@ class FavoritesController < ApplicationController
       #favorite = current_user.favorites.find(params[:id])
       favorite = current_user.favorites.find_by(song: song)
       if favorite
+      respond_to do |format|
         favorite.destroy
-        render json: {success: :true}
+        format.js { render :fav_delete}
       end
+    end
     end
 
 end

@@ -29,6 +29,35 @@ $(document).ready(function(){
          height: "180px"
        }
      });
+
+     $("#jplayer").jPlayer({
+       ready: function () {
+         $(this).jPlayer("setMedia", {
+           mp3: "http://rosetta.shoutca.st:9233/stream"
+         });
+       },
+       swfPath: "http://www.dewtone.com/player",
+       solution: 'html, flash',
+       supplied: "mp3",
+       preload: 'none',
+       volume: 0.8,
+       muted: false,
+       cssSelectorAncestor: "",
+       cssSelector: {
+         title: "#title",
+         play: "#play",
+         pause: "#pause",
+         stop: "#stop",
+         mute: "#speaker",
+         unmute: "#speaker-off",
+         currentTime: "#currentTime",
+         duration: "#duration"
+       },
+       size: {
+         width: "320px",
+         height: "180px"
+       }
+     });
    });
 
   //   cssSelector: {
