@@ -3,7 +3,7 @@
 
       <% if user_signed_in? %>
 <!-- SELECT CHANNEL   -->
-      <div id="select-channel" class="page">
+      <div id="select-channel" data-dom-cache="true" class="page">
         <div id="stream-1">
         <a href="#" id="select-stream-1" class="play"><h2>Channel 1 - Light Frequencies</h2>
         <h4>Ambient, Textures, Misc Rhythms</h4></a>
@@ -19,11 +19,11 @@
     <% else %>
 <!-- SPLASH SCREEN -->
       <div id="splash" class="page">
-        <h1>softs<span class="light-blue">o</span>unds</h1>
+        <h1>s<span class="light-blue">o</span>ftsounds</h1>
         <div class="intro-buttons">
-        <button id="button-login" class="button button--winona button--border-thin button--round-s" data-text="Log In">Log In</button></a>
+        <span id="button-login">Log In</span></a>
         <span class="space"></span>
-        <button id="button-channel" class="button button--winona button--border-thin button--round-s" data-text="Explore">Explore</button>
+        <span id="button-channel">Listen</span>
         </div>
       </div>
 <!-- /SPLASH SCREEN -->
@@ -33,15 +33,32 @@
       <div id="stream-data-1" class="page">
         <%= render "stream_data_1" %>
       </div>
-      <div id="track-info-1" class="page"><span class="info"></span><span class="favorite favorite-button"></span></div>
+      <div id="track-info-1" class="page"><span class="info-1"></span><span class="favorite favorite-button-1"></span></div>
 <!-- /STREAM DATA LIGHT-->
 
 <!-- STREAM DATA DEEP  -->
       <div id="stream-data-2" class="page">
         <%= render "stream_data_2" %>
       </div>
-      <div id="track-info-2" class="page"><span class="info"></span><span class="favorite favorite-button"></span></div>
+      <div id="track-info-2" class="page"><a href="#info-popup"><span class="info-2"></span></a><span class="favorite favorite-button-2"></span></div>
 <!-- /STREAM DATA DEEP-->
+
+<!-- INFO POPUP  -->
+
+<div id="info-popup" class="info-overlay">
+	<div class="popup">
+		<h2><%= @stream2.metadata.artist %> - <%= @stream2.metadata.song %></h2>
+		<a class="info-close" href="#"></a>
+		<div class="info-content">
+      Cover Art:
+			Label:
+      Download:
+      Artist Soundcloud:
+		</div>
+	</div>
+</div>
+
+<!-- /INFO POPUP  -->
 
 <!-- LOG IN -->
 <div id="log-in" class="page">

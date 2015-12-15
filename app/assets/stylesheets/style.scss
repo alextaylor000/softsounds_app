@@ -10,6 +10,37 @@ Version: 1.0.2
 /* ------------------------------------------------------------------
 Main page
 ------------------------------------------------------------------ */
+#button-login {
+  cursor: pointer;
+  font-family: 'montserratultra_light';
+  color: white;
+  opacity: .7;
+  font-size: 17px;
+  margin-top: 10px;
+  backface-visibility: hidden;
+}
+
+#button-login:hover {
+  opacity: 1;
+  backface-visibility: hidden;
+  font-weight: bold;
+}
+
+#button-channel:hover {
+  opacity: 1;
+  backface-visibility: hidden;
+  font-weight: bold;
+}
+
+#button-channel {
+  cursor: pointer;
+  font-family: 'montserratultra_light';
+  color: white;
+  opacity: .7;
+  font-size: 17px;
+  margin-top: 10px;
+  backface-visibility: hidden;
+}
 
 .ion-close-round {
   margin-top: -5px;
@@ -30,8 +61,8 @@ canvas {
 }
 
 .space {
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 #particles-js {
@@ -185,7 +216,28 @@ canvas {
   transition: .5s;
 }
 
-.info {
+.info-1 {
+  background: url('info.png') no-repeat;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+  backface-visibility: hidden;
+  display: inline-block;
+  margin-right: 25px;
+  opacity: .7;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.info-1:hover {
+  opacity: 1;
+}
+
+.info-2:hover {
+  opacity: 1;
+}
+
+.info-2 {
   background: url('info.png') no-repeat;
   background-size: 24px 24px;
   width: 24px;
@@ -423,6 +475,7 @@ canvas {
   padding-bottom: 20px;
   padding-left: 25px;
   backface-visibility: hidden;
+  font-size: 22px;
 }
 
 
@@ -491,14 +544,14 @@ Player
 
 #play-forward {
   background: url("player_forward.png") no-repeat;
-  background-size: 26px 26px;
+  background-size: 24px 24px;
   display: inline-block;
   color: white;
   width: 28px;
   height: 28px;
   vertical-align: middle;
   z-index: 2;
-  margin-top: 11px;
+  margin-top: 13px;
   opacity: .9;
   position: absolute;
   backface-visibility: hidden;
@@ -506,16 +559,24 @@ Player
   margin-left: 53px;
 }
 
+#play-forward:hover {
+  opacity: .7;
+}
+
+#play-back:hover {
+  opacity: .7;
+}
+
 #play-back {
   background: url('player_back.png') no-repeat;
-  background-size: 26px 26px;
+  background-size: 24px 24px;
   display: inline-block;
   color: white;
   width: 28px;
   height: 28px;
   vertical-align: middle;
   z-index: 2;
-  margin-top: 11px;
+  margin-top: 13px;
   opacity: .9;
   position: absolute;
   backface-visibility: hidden;
@@ -713,6 +774,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased !important;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  z-index: 50;
 }
 
 h1, .h1 {
@@ -1724,7 +1786,7 @@ Navigation
 }
 
 .navbar-custom .navbar-brand {
-  opacity: 0;
+  opacity: .95;
 	padding: 10px 15px;
 	letter-spacing: 2px;
 	font-weight: 400;
@@ -1742,7 +1804,7 @@ Navigation
 }
 
 .navbar-custom .navbar-brand:hover {
-	 opacity: .8;
+	 opacity: .5;
    }
 
 .navbar-custom a {
@@ -1960,6 +2022,9 @@ Navigation
 /* ------------------------------------------------------------------
 Hero
 ------------------------------------------------------------------- */
+.deepbackground {
+  background: url(softsounds3.jpg) no-repeat center center fixed;
+}
 
 .module-hero {
 	position: relative;
@@ -1968,6 +2033,7 @@ Hero
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  transition: 1.5s;
 	// background: linear-gradient(270deg, #246655, #337895);
   // background-size: 400% 400%;
   // -webkit-animation: AnimationName 10s ease infinite;

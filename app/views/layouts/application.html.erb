@@ -28,7 +28,7 @@
             <a href="#" id="channel-page">Select Channel</a>
           </li>
           <li class="slidedown">
-            <a href="#" id="favorite-page">Favorites</a>
+            <a href="#favorites" id="favorite-page">Favorites</a>
           </li>
           <li class="slidedown">
             <a href="#" id="faq-page">FAQ</a>
@@ -67,7 +67,9 @@
 
       <div class="container">
         <div class="navbar-header">
-          <span class="navbar-brand">softsounds</span>
+          <% if user_signed_in? %>
+          <span class="navbar-brand">s<span class="light-blue">o</span>ftsounds</span>
+          <% end %>
         </div>
 
         <!-- RIGHT NAVBAR -->
@@ -84,7 +86,7 @@
         <ul class="extra-navbar nav navbar-nav navbar-right">
           <% if user_signed_in? %>
           <li>
-          <div class="fav-menu"><i class="nav-heart"></i><span id="userfavs"><%= "#{current_user.favorite_songs.count}" %></span></div>
+          <div class="fav-menu"><a href="#favorites"><i class="nav-heart"></i><span id="userfavs"><%= "#{current_user.favorite_songs.count}" %></span></a></div>
           </li>
           <% else %>
           <li>

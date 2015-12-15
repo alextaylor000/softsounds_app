@@ -39,8 +39,8 @@ $(document).ready(function(){
 //   });
 // };
 //
-// setInterval(updateStream1, 7000);
-// setInterval(updateStream2, 7000);
-
+// setInterval(updateStream1, 7500);
+// setInterval(updateStream2, 7500);
+//
 
 });

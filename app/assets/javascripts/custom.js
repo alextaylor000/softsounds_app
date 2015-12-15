@@ -154,6 +154,8 @@
 
 		$('#select-stream-1').on('click', function() {
 			$('.page').hide().css("opacity", "0");
+			$("#particles-js").fadeOut(1500);
+			$('.module-hero').css("background", "url(softsounds.jpg) no-repeat center center fixed").css("background-size", "cover");
 			$("#stream-data-1").css('display', "block").fadeTo(200, "1");
 			$("#track-info-1").css('display', "block").fadeTo(200, "1");
 			$(".footer").fadeTo(1500, "1");
@@ -163,6 +165,8 @@
 
 		$('#select-stream-2').on('click', function() {
 			$('.page').hide().css("opacity", "0");
+			$('.module-hero').css("background", "url(softsounds3.jpg) no-repeat center center fixed").css("background-size", "cover");
+			$("#particles-js").fadeOut(1500);
 			$("#stream-data-2").css('display', "block").fadeTo(200, "1");
 			$("#track-info-2").css('display', "block").fadeTo(200, "1");
 			$(".footer").fadeTo(1500, "1");
@@ -202,8 +206,7 @@
 		});
 
 		$('#button-login').on('click', function() {
-			$("#particles-js").fadeOut(2000);
-			$(".navbar-brand").css("opacity", "1");
+			$("#particles-js").fadeOut(1000);
 			$('.page').fadeOut(200).hide();
 			$("#log-in").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
@@ -212,6 +215,7 @@
 
 		$('#sign-up-page').on('click', function() {
 			$('.page').fadeOut(200).hide();
+			$("#particles-js").fadeOut(2000);
 			$("#sign-up").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
@@ -243,6 +247,7 @@
 
 		$(".navbar-brand").on("click", function() {
 			hideMenu();
+			$("#particles-js").fadeIn(1500);
 			$('.page').fadeOut(200).hide();
 			$("#select-channel").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');

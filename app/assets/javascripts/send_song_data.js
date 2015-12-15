@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $(".favorite-button").on("click", function(){
+  $(".favorite-button-1").on("click", function(){
     // console.log("favorite button clicked");
     var classes = $(this).attr("class").split(" ");
     // console.log(classes);
@@ -8,20 +8,20 @@ $(document).ready(function() {
   //debugger;
     if (classes.indexOf("favorite") >= 0) {
       // console.log('favoriting');
-      favorite();
+      favorite1();
     } else if (classes.indexOf("favorited") >=0) {
       // console.log('unfavoriting');
-      unfavorite();
+      unfavorite1();
     }
   });
 
-  var favorite = function() {
+  var favorite1 = function() {
     $.ajax({
       method: "POST",
       url: "/favorites",
       data: {
-        track: $("#track-data").html(),
-        artist: $("#artist-data").html()
+        track: $("#track-data-1").html(),
+        artist: $("#artist-data-1").html()
       },
       success: function() {
         $(".favorite").delay(800).addClass("favorited").removeClass("favorite");
@@ -32,12 +32,12 @@ $(document).ready(function() {
     });
   }
 
-  var unfavorite = function() {
+  var unfavorite1 = function() {
     $.ajax({
       method: "DELETE",
       url: "/favorites",
       data: {
-        track: $("#track-data").html()
+        track: $("#track-data-1").html()
         },
       success: function() {
         $(".favorited").addClass("favorite").removeClass("favorited");
@@ -52,8 +52,8 @@ $(document).ready(function() {
 //   method: "GET",
 //   url: "/favorites",
 //   data: {
-//     track_title: $("#song-data").html(),
-//     artist_title: $("#artist-data").html()
+//     track_title: $("#song-data-1").html(),
+//     artist_title: $("#artist-data-1").html()
 //   },
 //   success: function() {
 //     $(".favorite").addClass("favorited");
