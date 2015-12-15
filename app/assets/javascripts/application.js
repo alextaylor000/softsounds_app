@@ -18,9 +18,9 @@
 //= require_tree .
 
 
-   particlesJS.load('particles-js', 'assets/particle.json', function() {
+particlesJS.load('particles-js', 'assets/particle.json', function() {
       console.log('callback - particles.js config loaded');
-   });
+});
 
 
 $(document).ready(function(){
