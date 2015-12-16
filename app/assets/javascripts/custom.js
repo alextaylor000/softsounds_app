@@ -165,7 +165,7 @@
 
 		$('#select-stream-2').on('click', function() {
 			$('.page').hide().css("opacity", "0");
-			$('.module-hero').css("background", "url(softsounds3.jpg) no-repeat center center fixed").css("background-size", "cover");
+			$('.module-hero').css("background", "url(softsounds_night.jpg) no-repeat center center fixed").css("background-size", "cover");
 			$("#particles-js").fadeOut(1500);
 			$("#stream-data-2").css('display', "block").fadeTo(200, "1");
 			$("#track-info-2").css('display', "block").fadeTo(200, "1");
@@ -267,6 +267,21 @@
 		  $('body').removeClass('aux-navigation-active');
 		})
 
+		$("#speaker").on("mouseenter", function () {
+			$(".volume-box").css("opacity", "1");
+		})
+
+		$(".volume-box").on("mouseleave", function () {
+			$(this).css("opacity", "0");
+		})
+
+		$("#share").on("mouseenter", function () {
+			$(".share-box").css("opacity", "1");
+		})
+
+		$(".share-box").on("mouseleave", function () {
+			$(this).css("opacity", "0");
+		})
 
 		$(window).keydown(function(e) {
 			if (overlayMenu.hasClass('active')) {

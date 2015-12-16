@@ -86,6 +86,9 @@
         <ul class="extra-navbar nav navbar-nav navbar-right">
           <% if user_signed_in? %>
           <li>
+            <span class="username"><%= current_user.username %></span>
+          </li>
+          <li>
           <div class="fav-menu"><a href="#favorites"><i class="nav-heart"></i><span id="userfavs"><%= "#{current_user.favorite_songs.count}" %></span></a></div>
           </li>
           <% else %>
@@ -115,6 +118,18 @@
     <!-- /HERO -->
 
     <section class="footer">
+
+      <div class="volume-box">
+        <div class="volume-slider">
+          <div class="volume-button"></div>
+        </div>
+      </div>
+
+      <div class="share-box">
+        <span class="share-info">Share this track</span><br/>
+        <span><a class="share-link" href="http://twitter.com"><strong>Twitter</strong></a>
+        <span><a class="share-link" href="http://facebook.com"><strong>Facebook</strong></a>
+      </div>
 
         <section id="footer-player">
 

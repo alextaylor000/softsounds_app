@@ -10,6 +10,147 @@ Version: 1.0.2
 /* ------------------------------------------------------------------
 Main page
 ------------------------------------------------------------------ */
+
+.volume-box {
+  opacity: 0;
+  display: block;
+  position: fixed;
+  color: white;
+  background-color: rgba(221,221,221,.2);
+  margin-left: 22px;
+  left: 20px;
+  bottom: 65px;
+  height: 140px;
+  width: 50px;
+  border-radius: 3px;
+  transition: .3s;
+}
+
+.volume-slider {
+  opacity: .8;
+  display: block;
+  position: fixed;
+  color: white;
+  background-color: rgba(221,221,221,.3);
+  margin-left: 22px;
+  left: 44px;
+  bottom: 75px;
+  height: 120px;
+  width: 1px;
+  border-radius: 3px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.volume-button {
+  opacity: .9;
+  display: block;
+  position: fixed;
+  color: white;
+  border-color: white;
+  background-color: white;
+  border: 2px solid white;
+  margin-left: 22px;
+  left: 39px;
+  bottom: 182px;
+  height: 10px;
+  width: 11px;
+  border-radius: 50px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+
+.volume-box:before, .volume-box:after {
+  top: 100%;
+	left: 50%;
+	border: solid transparent;
+  content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.volume-box:after {
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: rgba(221, 221, 221, 0.2);
+	border-width: 10px;
+	margin-left: -10px;
+  opacity: .13;
+}
+.volume-box:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: rgba(221, 221, 221, 0.3);
+	border-width: 10px;
+	margin-left: -10px;
+  opacity: .58;
+}
+
+.share-box {
+  opacity: 0;
+  display: block;
+  position: fixed;
+  color: white;
+  background-color: rgba(221,221,221,.2);
+  margin-right: 15px;
+  right: 20px;
+  bottom: 65px;
+  height: 100px;
+  width: 210px;
+  border-radius: 3px;
+  transition: .3s;
+}
+
+.share-box:before, .share-box:after {
+  top: 100%;
+	left: 77%;
+	border: solid transparent;
+  content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+  opacity: .11;
+}
+
+.share-box:after {
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 10px;
+	margin-right: -10px;
+}
+
+.share-box:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 10px;
+	margin-right: -10px;
+}
+
+.share-info {
+  position: relative;
+  padding: 15px;
+  top: 7px;
+  color: #eee;
+  font-family: 'montserratultra_light';
+  font-weight: bold;
+}
+
+.share-link {
+  padding-left: 15px;
+  bottom: -6px;
+  display: inline-block;
+  position: relative;
+  margin-right: -5px;
+}
+
+a:hover {
+  color: #ddd;
+  opacity: .5;
+}
+
+
 #button-login {
   cursor: pointer;
   font-family: 'montserratultra_light';
@@ -18,6 +159,13 @@ Main page
   font-size: 17px;
   margin-top: 10px;
   backface-visibility: hidden;
+}
+
+.username {
+  display: inline-block;
+  color: white;
+  margin-top: 16px;
+  margin-right: 11px;
 }
 
 #button-login:hover {
@@ -417,7 +565,7 @@ canvas {
   overflow-y: auto;
   height: 450px;
   width: 60%;
-  background: rgba(32,56,59,.3);
+  background: rgba(34, 34, 34, 0.2);
   border-radius: 5px;
   text-align: left;
 }
