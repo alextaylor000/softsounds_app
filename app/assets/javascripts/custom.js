@@ -283,10 +283,6 @@
 			$(this).css("opacity", "0");
 		})
 
-		$("#pause").on("click", function (){
-			$(".volume-button").css("bottom", "80px");
-		})
-
 		$("#speaker").on("click", function (){
 			$(".volume-button").css("bottom", "80px");
 		})
@@ -294,6 +290,22 @@
 		$("#speaker-off").on("click", function (){
 			$(".volume-button").css("bottom", "182px");
 		})
+
+		$("#info-popup-button-1").on('click', function() {
+			$('.page').css("opacity", "0");
+			$('.footer').css("opacity", "0");
+		});
+
+		$("#info-popup-button-2").on('click', function() {
+			$('.page').css("opacity", "0");
+			$('.footer').css("opacity", "0");
+		});
+
+		$('.info-close').on('click', function() {
+			$('.page').css("opacity", "1");
+			$('.footer').css("opacity", "1");
+		});
+
 
 		$(window).keydown(function(e) {
 			if (overlayMenu.hasClass('active')) {

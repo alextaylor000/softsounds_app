@@ -33,26 +33,26 @@
       <div id="stream-data-1" class="page">
         <%= render "stream_data_1" %>
       </div>
-      <div id="track-info-1" class="page"><span class="info-1"></span><span class="favorite-1 favorite-button-1"></span></div>
+      <div id="track-info-1" class="page"><a id="info-popup-button-1" href="#info-popup"><span class="info-1"></span></a><span class="favorite-1 favorite-button-1"></span></div>
 <!-- /STREAM DATA LIGHT-->
 
 <!-- STREAM DATA DEEP  -->
       <div id="stream-data-2" class="page">
         <%= render "stream_data_2" %>
       </div>
-      <div id="track-info-2" class="page"><a href="#info-popup"><span class="info-2"></span></a><span class="favorite-2 favorite-button-2"></span></div>
+      <div id="track-info-2" class="page"><a id="info-popup-button-2" href="#info-popup"><span class="info-2"></span></a><span class="favorite-2 favorite-button-2"></span></div>
 <!-- /STREAM DATA DEEP-->
 
 <!-- INFO POPUP  -->
 
 <div id="info-popup" class="info-overlay">
 	<div class="popup">
-		<h2><%= @stream2.metadata.artist %> - <%= @stream2.metadata.song %></h2>
+		<img id="cover-art" src="http://www.dewtone.com/promo/cover_art.jpg">
+    <h2><%= @stream2.metadata.artist %> - <%= @stream2.metadata.song %></h2>
 		<a class="info-close" href="#">⊗</a>
 		<div class="info-content">
-        <li>Cover Art:</li>
-			  <li>Label:</li>
-        <li>Download:</li>
+        <li>Dewtone Recordings</li>
+        <li><a target="_blank" class="white" href="http://www.bandcamp.com"><strong>Buy this track</strong></a></li>
         </div>
 	</div>
 </div>

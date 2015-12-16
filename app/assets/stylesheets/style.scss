@@ -11,6 +11,10 @@ Version: 1.0.2
 Main page
 ------------------------------------------------------------------ */
 
+.white {
+  color: white!important;
+}
+
 .volume-box {
   opacity: 0;
   display: block;
@@ -94,24 +98,24 @@ Main page
   color: white;
   background-color: rgba(221,221,221,.2);
   margin-right: 15px;
-  right: 20px;
+  right: 0px;
   bottom: 65px;
-  height: 100px;
-  width: 210px;
+  height: 120px;
+  width: 270px;
   border-radius: 3px;
   transition: .3s;
 }
 
 .share-box:before, .share-box:after {
   top: 100%;
-	left: 77%;
-	border: solid transparent;
+  left: 76%;
+  border: solid transparent;
   content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-  opacity: .11;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  opacity: .10;
 }
 
 .share-box:after {
@@ -165,7 +169,7 @@ a:hover {
   display: inline-block;
   color: white;
   margin-top: 16px;
-  margin-right: 11px;
+  margin-right: 13px;
 }
 
 #button-login:hover {
@@ -300,7 +304,7 @@ canvas {
 
 #select-channel {
   transition: opacity .3s ease-in-out;
-  margin-top: -55px;
+  margin-top: -35px;
   backface-visibility: hidden;
   display: block;
 }
@@ -530,13 +534,13 @@ canvas {
 
 .nav-heart {
   background: url('heart_full.png') no-repeat;
-  background-size: 13px 13px;
-  width: 13px;
-  height: 13px;
+  background-size: 11px 11px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
   cursor: pointer;
   margin-right: 6px;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 }
 
 .fav-menu {
