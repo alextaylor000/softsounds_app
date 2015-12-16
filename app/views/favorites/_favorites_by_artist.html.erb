@@ -1,13 +1,13 @@
 <h2 class="ultralight">Favorites
-<span style="font-size: 14px" class="sort-header">(sort by Latest)</span>
-<span class="page-close float-right"><span></h2>
+<span style="font-size: 14px" class="sort-header">(sort by <strong><span id="sort-latest">Latest</a></strong>)</span>
+<a href="#"><span class="page-close float-right"><span></a></h2>
 <table>
-    <% @favoriteartists.each do |song| %>
+    <% @favorites.each do |song| %>
   <tr>
     <td>
       <p class="favsongs"><%= song.artist %> - <%= song.track %>
-      <span class="float-right"><i class="artist-link"> </i>
-                                <i class="download-link"> </i></span></p>
+      <span class="float-right"><a target="_blank" title="Artist Soundcloud" href="<%= song.artist_link%>"><i class="artist-link"> </i></a>
+                                <a target="_blank" title="Download Track"href="<%= song.track_link%>"><i class="download-link"></i></a></span></p>
   </td>
  </tr>
  <% end %>

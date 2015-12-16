@@ -12,7 +12,6 @@ class FavoritesController < ApplicationController
     end
 
     def create
-      # render json: params
       song = Song.find_by_track(params[:track])
       unless song
         song = Song.create( track:  params[:track],
@@ -37,7 +36,19 @@ class FavoritesController < ApplicationController
         favorite.destroy
         format.js { render :fav_delete}
       end
+     end
     end
+
+    def sort_artist
+      respond_to do |format|
+        format.js { render :sort_artist}
+      end
+    end
+
+    def sort_latest
+      respond_to do |format|
+        format.js { render :sort_latest}
+      end
     end
 
 end

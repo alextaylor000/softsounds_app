@@ -92,6 +92,30 @@ $(document).ready(function() {
     });
   }
 
+  $(document).on("click", "#sort-artist", function() {
+    console.log("clicked!");
+    sortArtist();
+  })
+
+  $(document).on("click", "#sort-latest", function() {
+    console.log("clicked!");
+    sortLatest();
+  })
+
+  var sortArtist = function() {
+    $.ajax({
+      method: "GET",
+      url: "/sort_artist",
+    });
+  };
+
+  var sortLatest = function() {
+    $.ajax({
+      method: "GET",
+      url: "/sort_latest",
+    });
+  };
+
 // $.ajax({
 //   method: "GET",
 //   url: "/favorites",

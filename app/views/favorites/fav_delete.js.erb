@@ -1,1 +1,4 @@
 $(".favorited").addClass("favorite").removeClass("favorited");
+$("#userfavs").replaceWith('<span id="userfavs"><%= "#{current_user.favorite_songs.count}" %></span>');
+<% @favorites = current_user.favorite_songs.order("created_at DESC") %>
+$("#favorites-list").html("<%= j render "favorites/favorites_by_latest" %>");

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get "/refresh_stream1" => "home#refresh_stream1"
   get "/refresh_stream2" => "home#refresh_stream2"
 
+  get "/sort_artist" =>     "favorites#sort_artist"
+  get "/sort_latest" =>     "favorites#sort_latest"
+
   delete "/favorites" => "favorites#destroy"
 
   resources :favorites, only: [:create, :show, :index]

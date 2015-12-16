@@ -1,0 +1,2 @@
+<% @favorites = current_user.favorite_songs.order("created_at DESC") %>
+$("#favorites-list").html("<%= j render "favorites/favorites_by_latest" %>");

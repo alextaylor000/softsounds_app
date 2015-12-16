@@ -654,7 +654,16 @@ canvas {
 }
 
 #sort-artist:hover {
+  opacity: .8;
+}
+
+#sort-latest {
   cursor: pointer;
+  opacity: 1;
+  transition: .5s;
+}
+
+#sort-latest:hover {
   opacity: .8;
 }
 
