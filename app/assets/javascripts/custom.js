@@ -283,6 +283,18 @@
 			$(this).css("opacity", "0");
 		})
 
+		$("#pause").on("click", function (){
+			$(".volume-button").css("bottom", "80px");
+		})
+
+		$("#speaker").on("click", function (){
+			$(".volume-button").css("bottom", "80px");
+		})
+
+		$("#speaker-off").on("click", function (){
+			$(".volume-button").css("bottom", "182px");
+		})
+
 		$(window).keydown(function(e) {
 			if (overlayMenu.hasClass('active')) {
 				if (e.which === 27) {

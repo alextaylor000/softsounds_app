@@ -402,7 +402,7 @@ canvas {
   opacity: 1;
 }
 
-.favorite {
+.favorite-1 {
   background: url('heart_empty.png') no-repeat;
   background-size: 24px 24px;
   width: 24px;
@@ -418,7 +418,27 @@ canvas {
   opacity: .8
   }
 
-.favorite:hover {
+.favorite-1:hover {
+  opacity: 1;
+}
+
+.favorite-2 {
+  background: url('heart_empty.png') no-repeat;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+  backface-visibility: hidden;
+  display: inline-block;
+  margin-left: 25px;
+  cursor: pointer;
+  overflow: visible;
+	-webkit-transition: .5s;
+	transition: .5s;
+  color: white;
+  opacity: .8
+  }
+
+.favorite-2:hover {
   opacity: 1;
 }
 
@@ -474,7 +494,7 @@ canvas {
   }
 }
 
-.favorited {
+.favorited-1 {
   background: url('heart_full.png') no-repeat;
   background-size: 24px 24px;
   width: 24px;
@@ -491,6 +511,22 @@ canvas {
 	animation: anim-effect-novak 1s forwards;
 }
 
+.favorited-2 {
+  background: url('heart_full.png') no-repeat;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+  backface-visibility: hidden;
+  display: inline-block;
+  margin-left: 25px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+	transition: 1s;
+  color: white;
+  transform-origin: center;
+  -webkit-animation: anim-effect-novak 1s forwards;
+	animation: anim-effect-novak 1s forwards;
+}
 
 .nav-heart {
   background: url('heart_full.png') no-repeat;

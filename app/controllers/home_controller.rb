@@ -20,7 +20,6 @@ class HomeController < ApplicationController
   end
 
   def refresh_stream1
-    @stream1 = Shoutout::Stream.new("http://rosetta.shoutca.st:9368/stream")
     @stream1.connect
     respond_to do |format|
       format.js {render :stream1_data}
@@ -28,7 +27,6 @@ class HomeController < ApplicationController
   end
 
   def refresh_stream2
-    @stream2 = Shoutout::Stream.new("http://rosetta.shoutca.st:9233/stream")
     @stream2.connect
     respond_to do |format|
       format.js {render :stream2_data}
