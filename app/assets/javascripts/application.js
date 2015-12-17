@@ -25,22 +25,22 @@ particlesJS.load('particles-js', 'assets/particle.json', function() {
 
 $(document).ready(function(){
 
-function updateStream1() {
-  $.ajax({
-    type : 'GET',
-    url: '/refresh_stream1'
-  });
-};
-
-function updateStream2() {
-  $.ajax({
-    type : 'GET',
-    url: '/refresh_stream2'
-  });
-};
-
-setInterval(updateStream1, 8000);
-setInterval(updateStream2, 8000);
+// function updateStream1() {
+//   $.ajax({
+//     type : 'GET',
+//     url: '/refresh_stream1'
+//   });
+// };
+//
+// function updateStream2() {
+//   $.ajax({
+//     type : 'GET',
+//     url: '/refresh_stream2'
+//   });
+// };
+//
+// setInterval(updateStream1, 8000);
+// setInterval(updateStream2, 8000);
 
 
 });
