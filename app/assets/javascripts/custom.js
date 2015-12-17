@@ -200,6 +200,7 @@
 
 		$('#log-in-page').on('click', function() {
 			$('.page').fadeOut(200).hide();
+			$("#particles-js").fadeOut(1500);
 			$("#log-in").css('display', "block").fadeTo(200, "1");
 		  $('body').removeClass('aux-navigation-active');
 		  return false;
