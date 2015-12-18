@@ -48,7 +48,11 @@
 <div id="info-popup" class="info-overlay">
 	<div class="popup">
 		<img id="cover-art" src="http://www.dewtone.com/promo/cover_art.jpg">
-    <h2><%= @stream2.metadata.artist %> - <%= @stream2.metadata.song %></h2>
+    <% if @stream2.nil? %>
+      <h2>couldn't connect to stream</h2>
+    <% else %>
+      <h2><%= @stream2.metadata.artist %> - <%= @stream2.metadata.song %></h2>
+    <% end %>
 		<a class="info-close" href="#">⊗</a>
 		<div class="info-content">
         <li>Dewtone Recordings</li>

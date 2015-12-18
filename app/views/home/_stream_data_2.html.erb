@@ -1,3 +1,8 @@
 <h4>currently playing:</h4>
-<h2 style="font-size: 30px; color:#fff" id="artist-data-2"><%= @stream2.metadata.artist %></h2>
-<h2 style="font-size: 20px; color:#eee" id="track-data-2"><%= @stream2.metadata.song %></h2>
+<% if @stream2.nil? %>
+  <h2 style="font-size: 30px; color:#fff" id="artist-data-2">couldn't load stream</h2>
+  <h2 style="font-size: 20px; color:#eee" id="track-data-2">couldn't load stream</h2>
+<% else %>
+  <h2 style="font-size: 30px; color:#fff" id="artist-data-2"><%= @stream2.metadata.artist %></h2>
+  <h2 style="font-size: 20px; color:#eee" id="track-data-2"><%= @stream2.metadata.song %></h2>
+<% end %>

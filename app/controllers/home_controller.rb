@@ -5,29 +5,50 @@ class HomeController < ApplicationController
   def index
     @stream1 = Shoutout::Stream.new("http://rosetta.shoutca.st:9368/stream")
     begin
-    @stream1.connect
+      @stream1.connect
     rescue SocketError
+      @stream1 = nil
     end
+
     @stream2 = Shoutout::Stream.new("http://rosetta.shoutca.st:9233/stream")
+
     begin
-    @stream2.connect
+      @stream2.connect
     rescue SocketError
+      @stream2 = nil
     end
+
     if user_signed_in?
+
     @favorites = current_user.favorite_songs.order("created_at DESC")
     @favoriteartists = current_user.favorite_songs.order("artist ASC")
     end
   end
 
   def refresh_stream1
-    @stream1.connect
+    @stream1 = Shoutout::Stream.new("http://rosetta.shoutca.st:9368/stream")
+
+    begin
+      @stream1.connect
+    rescue SocketError
+      @stream1 = nil
+    end
+
+
     respond_to do |format|
       format.js {render :stream1_data}
     end
   end
 
   def refresh_stream2
-    @stream2.connect
+    @stream2 = Shoutout::Stream.new("http://rosetta.shoutca.st:9233/stream")
+
+    begin
+      @stream2.connect
+    rescue SocketError
+      @stream2 = nil
+    end
+
     respond_to do |format|
       format.js {render :stream2_data}
     end
